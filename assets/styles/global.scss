@@ -1,5 +1,9 @@
 @import './fonts';
-@import './vars';
+
+/* vars */
+$bodyFz: 16px;
+$siteBg: #fff;
+$sans: 'PTSans', sans-serif;
 
 * {
   box-sizing: border-box;
@@ -27,6 +31,7 @@ ul {
 
 a {
   text-decoration: none;
+	color: #000;
 }
 
 h1,
@@ -39,8 +44,74 @@ p {
   margin: 0;
 }
 
+p {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+
 button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.1s 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.full {
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 990px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 570px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
 }
