@@ -38,11 +38,11 @@ export default {
   font-family: "PTSans", sans-serif;
   font-weight: 400;
 	letter-spacing: 0.5px;
-  padding: 11px 13px;
+  padding: 9px 13px 11px;
   background: transparent;
   transition: 0.2s;
   border-radius: 16px;
   cursor: pointer;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 </style>

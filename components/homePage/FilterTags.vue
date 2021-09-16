@@ -27,7 +27,7 @@ export default {
     ...mapGetters("cases-tags", ["casesTags"]),
   },
   methods: {
-    ...mapActions(["fetchCases"]),
+    ...mapActions("cases", ["fetchCases"]),
     updateTags(tagId, bool) {
       if (bool) this.selectedTags.push(tagId);
       else {

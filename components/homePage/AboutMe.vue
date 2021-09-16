@@ -9,8 +9,8 @@
         <li class="skill">Design of your site</li>
         <!-- <li class="skill">3D models in Blender</li> -->
       </ul>
-      <ActionButton @tap="goToCases">projects</ActionButton>
-			<ActionButton class="about-btn" @tap="$router.push({path: '/about'})">about me</ActionButton>
+      <ActionButton @tap="goToCases">Projects</ActionButton>
+			<ActionButton class="about-btn" @tap="$router.push({path: '/about'})">About me</ActionButton>
     </div>
   </div>
 </template>

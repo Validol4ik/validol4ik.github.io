@@ -1,3 +1,5 @@
+import cases from "../mock/cases";
+
 export default {
 	fetchCases: ({ commit }, tagsIds) => {
 		if (tagsIds.length > 0) {

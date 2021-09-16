@@ -1,5 +1,5 @@
 <template>
-  <li class="case">
+  <li class="case" @click="$router.push({path: `/case/${caseObj.slug}`})">
     <div class="case__img">
       <img :src="imageSrc(caseObj.preview)" alt="case Image" class="image" />
       <h3 class="case__title">{{ caseObj.name }}</h3>
@@ -73,6 +73,7 @@ export default {
   transition: 0.25s ease-in-out;
   user-select: none;
   position: relative;
+	cursor: pointer;
 	&__img {
     width: 100%;
     height: 240px;

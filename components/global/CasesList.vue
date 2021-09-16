@@ -1,6 +1,6 @@
 <template>
   <ul class="cases-list">
-    <case-item v-for="caseObj in cases" :key="caseObj.id" :case-obj="caseObj"  />
+    <case-item v-for="caseObj in cases" :key="caseObj.slug" :case-obj="caseObj"  />
   </ul>
 </template>
 
