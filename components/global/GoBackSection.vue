@@ -1,7 +1,7 @@
 <template>
   <section class="go-back">
     <div class="container">
-			<nuxt-link class="go-back__button" to="/"><span class="go-back__arrows">{{ arrows }}</span> Retun to home</nuxt-link>
+			<nuxt-link class="go-back__button" to="/"><span class="go-back__arrows">{{ arrows }}</span> Return to home</nuxt-link>
     </div>
   </section>
 </template>

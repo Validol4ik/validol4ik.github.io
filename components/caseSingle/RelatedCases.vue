@@ -1,7 +1,7 @@
 <template>
   <section class="related">
     <div class="container">
-      <h2 class="related__title">Other Cases</h2>
+      <h2 class="related__title">{{ title }}</h2>
       <cases-list :cases="relatedCases" />
     </div>
   </section>
@@ -18,7 +18,11 @@ export default {
   props: {
     currentId: {
 			type: Number,
-			default: () => 0
+			default: () => undefined,
+		},
+		title: {
+			type: String,
+			default: 'Other Cases',
 		},
   },
   computed: {
