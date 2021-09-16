@@ -1,7 +1,7 @@
 export default {
 	cases: ({ cases }) => cases,
-	caseSingle: ({ cases }) => (id) => {
-		const caseById = cases.find((caseSingle) => caseSingle.id == id);
+	caseSingle: ({ cases }) => (slug) => {
+		const caseById = cases.find((caseSingle) => caseSingle.slug === slug);
 		return caseById;
 	},
 }

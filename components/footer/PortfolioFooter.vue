@@ -4,7 +4,7 @@
       <div class="content-wrapper">
         <icons-list />
         <h3 class="footer__title">
-          I will take on the job
+          Valentyn Polishchyk
         </h3>
       </div>
       <span class="footer__rules">All rights reserved</span>
