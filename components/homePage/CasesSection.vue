@@ -1,7 +1,7 @@
 <template>
-  <section class="cases-section">
+  <section id="cases-hook" class="cases-section">
     <div class="container">
-      <h3 id="cases-hook" class="section-title">A few of my recent projects</h3>
+      <h3 class="section-title">A few of my recent projects</h3>
       <filter-tags />
       <cases-list :cases="cases" />
     </div>
@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 .cases-section {
-  padding-top: 20px;
+  padding-top: 15px;
   .section-title {
     font-size: 38px;
     text-align: center;

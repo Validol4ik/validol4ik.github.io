@@ -126,7 +126,7 @@ export default {
     box-shadow: 0 4px 6px rgba($color: #000, $alpha: 0.2);
   }
   .content {
-    padding: 15px 15px 30px 15px;
+    padding: 15px 15px 60px 15px;
   }
   &__excerpt {
     line-height: 18px;

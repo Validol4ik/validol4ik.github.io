@@ -25,7 +25,11 @@ export default {
   methods: {
     goToCases() {
       const $casesHook = document.getElementById("cases-hook");
-      window.scrollTo(0, $casesHook.offsetTop - 20);
+
+      $casesHook.scrollIntoView({
+      	behavior: 'smooth',
+      	block: 'start'
+    	})
     },
   },
 };
