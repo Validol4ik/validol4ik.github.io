@@ -17,13 +17,14 @@ export default {
 </script>
 
 <style lang="scss">
-$mon: 'Montserrat', sans-serif;
+
 .profile {
   display: flex;
   align-items: center;
   cursor: pointer;
   &__name {
-    font-family: $mon;
+    font-family: 'PTSans', sans-serif;
+		letter-spacing: 0.5px;
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 10px;

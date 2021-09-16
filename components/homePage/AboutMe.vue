@@ -9,7 +9,8 @@
         <li class="skill">Design of your site</li>
         <!-- <li class="skill">3D models in Blender</li> -->
       </ul>
-      <ActionButton @tap="goToCases">my projects</ActionButton>
+      <ActionButton @tap="goToCases">projects</ActionButton>
+			<ActionButton class="about-btn" @tap="$router.push({path: '/about'})">about me</ActionButton>
     </div>
   </div>
 </template>
@@ -37,7 +38,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   &__title {
-    font-size: 38px;
+    font-size: 36px;
     line-height: 49px;
     margin-bottom: 16px;
 		font-family: 'Montserrat', sans-serif;
@@ -60,6 +61,10 @@ export default {
       top: 0;
     }
   }
+}
+
+.about-btn {
+	margin-left: 10px;
 }
 
 @media (max-width: 991px) {

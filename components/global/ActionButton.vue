@@ -37,12 +37,11 @@ export default {
 .action-button {
   font-family: "PTSans", sans-serif;
   font-weight: 400;
-  padding: 17px 15px;
-  font-size: 18px;
-  letter-spacing: 0.8px;
+	letter-spacing: 0.5px;
+  padding: 11px 13px;
   background: transparent;
   transition: 0.2s;
-  border-radius: 18px;
+  border-radius: 16px;
   cursor: pointer;
   text-transform: uppercase;
 }

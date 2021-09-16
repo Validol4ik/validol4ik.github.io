@@ -29,7 +29,7 @@ export default {
 .cases-section {
   padding-top: 20px;
   .section-title {
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
 		font-family: 'Montserrat', sans-serif;
   }

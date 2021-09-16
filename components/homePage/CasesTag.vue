@@ -42,8 +42,7 @@ export default {
 
 .cases-tag {
   border: 2px solid #b02851;
-  padding: 5px 10px;
-  font-family: "Montserrat", sans-serif;
+  padding: 4px 10px 6px;
   font-size: 16px;
   color: #000;
   border-radius: 13px;

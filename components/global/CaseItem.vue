@@ -15,9 +15,6 @@
     </div>
     <div class="content">
       <p class="case__excerpt">{{ caseObj.excerpt }}</p>
-      <button class="case__more" @click="openCase(caseObj.id)">
-        Read more
-      </button>
       <div class="other-info">
         <div class="visit">
           <icon-base><show-icon /></icon-base>
@@ -78,7 +75,7 @@ export default {
   position: relative;
 	&__img {
     width: 100%;
-    height: 250px;
+    height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +84,7 @@ export default {
     overflow: hidden;
     background: #000;
     img {
-      opacity: 0.7;
+      opacity: 0.8;
       transition: 0.25s ease-in-out;
       z-index: 0;
     }
@@ -102,7 +99,9 @@ export default {
     }
   }
   &__title {
-    font-size: 36px;
+    font-size: 32px;
+		letter-spacing: 0.5px;
+		font-family: "Montserrat", sans-serif;
     color: #fff;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
     z-index: 1;
@@ -118,11 +117,10 @@ export default {
     padding: 10px;
   }
   &__tag {
-    padding: 4px 7px;
+    padding: 4px 7px 5px;
     background: #fff;
     margin: 5px;
     border-radius: 9px;
-    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     box-shadow: 0 4px 6px rgba($color: #000, $alpha: 0.2);
   }
@@ -130,33 +128,8 @@ export default {
     padding: 15px 15px 60px 15px;
   }
   &__excerpt {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    line-height: 18px;
     letter-spacing: 0.045em;
-  }
-  &__more {
-    padding: 0;
-    margin-top: 15px;
-    position: relative;
-    background: transparent;
-    font-family: "PTSans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.045em;
-    text-decoration: underline;
-    &::after {
-      content: ">>";
-      position: absolute;
-      right: -25px;
-      top: 1px;
-      transition: 0.2s ease;
-    }
-    &:hover {
-      &::after {
-        transform: translateX(6px);
-      }
-    }
   }
   .other-info {
     display: flex;
@@ -186,11 +159,10 @@ export default {
   }
   &__url,
   &__time {
-    font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.045em;
-    margin-left: 5px;
+    margin-left: 6px;
   }
   &__url {
     color: #000;
