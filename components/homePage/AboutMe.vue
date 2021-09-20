@@ -9,30 +9,34 @@
         <li class="skill">Design of your site</li>
         <!-- <li class="skill">3D models in Blender</li> -->
       </ul>
-      <ActionButton @tap="goToCases">Projects</ActionButton>
-			<ActionButton class="about-btn" @tap="$router.push({path: '/about'})">About me</ActionButton>
+      <div class="buttons-group">
+        <ActionButton @tap="goToCases">Projects</ActionButton>
+        <ActionButton class="about-btn" @tap="$router.push({ path: '/about' })"
+          >About me</ActionButton
+        >
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ActionButton from "@/components/global/ActionButton";
+import ActionButton from '@/components/global/ActionButton'
 export default {
-  name: "AboutMe",
+  name: 'AboutMe',
   components: {
     ActionButton,
   },
   methods: {
     goToCases() {
-      const $casesHook = document.getElementById("cases-hook");
+      const $casesHook = document.getElementById('cases-hook')
 
       $casesHook.scrollIntoView({
-      	behavior: 'smooth',
-      	block: 'start'
-    	})
+        behavior: 'smooth',
+        block: 'start',
+      })
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -45,7 +49,7 @@ export default {
     font-size: 36px;
     line-height: 49px;
     margin-bottom: 16px;
-		font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   .skills {
     margin-bottom: 60px;
@@ -53,13 +57,13 @@ export default {
   .skill {
     position: relative;
     padding-left: 25px;
-    font-family: "PTSans", sans-serif;
+    font-family: 'PTSans', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.045em;
     &::before {
-      content: "-";
+      content: '-';
       position: absolute;
       left: 10px;
       top: 0;
@@ -68,7 +72,7 @@ export default {
 }
 
 .about-btn {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 @media (max-width: 991px) {
@@ -102,7 +106,7 @@ export default {
       text-align: center;
       margin-bottom: 10px;
       &::before {
-        content: "";
+        content: '';
         display: inline-block;
         width: 28px;
         height: 1px;
@@ -112,9 +116,10 @@ export default {
       }
     }
   }
-  .action-button {
-    display: block;
-    margin: 0 auto;
+  .buttons-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

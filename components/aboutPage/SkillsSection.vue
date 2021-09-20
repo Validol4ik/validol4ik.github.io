@@ -63,49 +63,49 @@
 
 <script>
 export default {
-  name: "SkillsSection",
+  name: 'SkillsSection',
   data() {
     return {
       skills: [
-				{
+        {
           id: 1,
-          name: "WordPress",
+          name: 'WordPress',
           value: 65,
         },
         {
           id: 2,
-          name: "Vue",
+          name: 'Vue',
           value: 80,
         },
-				{
-					id: 3,
-					name: "Quasar",
-					value: 5,
-				},
-				{
-					id: 4,
-					name: "Strapi",
-					value: 20,
-				},
+        {
+          id: 3,
+          name: 'Quasar',
+          value: 5,
+        },
+        {
+          id: 4,
+          name: 'Strapi',
+          value: 20,
+        },
         {
           id: 5,
-          name: "Design",
+          name: 'Design',
           value: 30,
         },
-				{
-					id: 6,
-          name: "Golang",
+        {
+          id: 6,
+          name: 'Golang',
           value: 5,
-				},
-				{
-					id: 7,
-          name: "English",
+        },
+        {
+          id: 7,
+          name: 'English',
           value: 15,
-				},
+        },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -134,11 +134,11 @@ export default {
   }
   &__name {
     font-size: 40px;
-		font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   &__specialization {
     text-transform: uppercase;
-		font-size: 20px;
+    font-size: 20px;
     margin-top: 10px;
   }
   .me-block {
@@ -148,7 +148,7 @@ export default {
       margin-bottom: 16px;
       position: relative;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: -3px;
@@ -162,7 +162,7 @@ export default {
       padding-left: 26px;
       line-height: 24px;
       letter-spacing: 0.5px;
-			font-size: 18px;
+      font-size: 18px;
     }
     .list-item {
       margin: 8px 0;
@@ -186,23 +186,24 @@ export default {
     .skill-range {
       width: 60%;
       position: relative;
-			height: 9px;
-			.line, .dot {
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				top: 0;
-				border-radius: 50px;
-				height: 100%;
-			}
+      height: 9px;
+      .line,
+      .dot {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50px;
+        height: 100%;
+      }
       .line {
         width: 100%;
         background: rgba(#000, 0.1);
-				z-index: 1;
+        z-index: 1;
       }
       .dot {
         background: #b02851;
-				z-index: 2;
+        z-index: 2;
       }
     }
   }
@@ -244,9 +245,6 @@ export default {
         padding: 9px;
         letter-spacing: 1.6px;
         border-radius: 10px;
-      }
-      .skill-range {
-        width: 48%;
       }
     }
   }
@@ -304,7 +302,7 @@ export default {
   }
   .me {
     .me-outline {
-      padding: 50px 70px 0;
+      padding: 0 70px 0;
     }
     .who-i-am {
       display: none;
@@ -338,9 +336,14 @@ export default {
 }
 
 @media (max-width: 430px) {
+  .about {
+    .go-back {
+      padding-bottom: 0;
+    }
+  }
   .me {
     .me-outline {
-      padding: 40px 20px 0;
+      padding: 0 20px 0;
       margin-bottom: 50px;
     }
     .me-block {
@@ -366,16 +369,21 @@ export default {
 @media (max-width: 360px) {
   .me {
     .me-outline {
-      padding: 40px 0 0;
+      padding: 0;
     }
     .me-block {
       &__text,
       &__list {
-        padding-left: 15px;
+        padding-left: 10px;
       }
     }
     .skills-list {
-      padding-left: 15px;
+      padding-left: 5px;
+      padding-right: 0;
+      .skill-range {
+        height: 7px;
+        width: 58%;
+      }
     }
   }
 }

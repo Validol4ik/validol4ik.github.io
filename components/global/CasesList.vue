@@ -1,24 +1,28 @@
 <template>
   <ul class="cases-list">
-    <case-item v-for="caseObj in cases" :key="caseObj.slug" :case-obj="caseObj"  />
+    <case-item
+      v-for="caseObj in cases"
+      :key="caseObj.slug"
+      :case-obj="caseObj"
+    />
   </ul>
 </template>
 
 <script>
-import CaseItem from "./CaseItem.vue";
+import CaseItem from './CaseItem.vue'
 
 export default {
-  name: "CasesList",
-	components: {
+  name: 'CasesList',
+  components: {
     CaseItem,
   },
   props: {
     cases: {
-			type: Array,
-			default: () => [],
-		},
+      type: Array,
+      default: () => [],
+    },
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -27,7 +31,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   min-height: 450px;
-	.case {
+  .case {
     margin-bottom: 50px;
   }
   .case:not(:nth-child(3n)) {
@@ -39,7 +43,7 @@ export default {
   .cases-list {
     justify-content: space-between;
     padding: 0 80px;
-		.case {
+    .case {
       margin-bottom: 65px;
     }
     .case:not(:nth-child(3n)) {

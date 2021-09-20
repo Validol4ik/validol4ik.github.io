@@ -1,5 +1,5 @@
 <template>
-  <li class="case" @click="$router.push({path: `/case/${caseObj.slug}`})">
+  <li class="case" @click="$router.push({ path: `/case/${caseObj.slug}` })">
     <div class="case__img">
       <img :src="imageSrc(caseObj.preview)" alt="case Image" class="image" />
       <h3 class="case__title">{{ caseObj.name }}</h3>
@@ -7,7 +7,7 @@
         <li
           v-for="tegObj in cardTags(caseObj.tags)"
           :key="tegObj.id"
-					class="case__tag"
+          class="case__tag"
         >
           {{ tegObj.name }}
         </li>
@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import IconBase from "@/components/global/icons/IconBase";
-import ShowIcon from "@/components/global/icons/ShowIcon";
-import ClockIcon from "@/components/global/icons/ClockIcon";
+import { mapGetters } from 'vuex'
+import IconBase from '@/components/global/icons/IconBase'
+import ShowIcon from '@/components/global/icons/ShowIcon'
+import ClockIcon from '@/components/global/icons/ClockIcon'
 export default {
-  name: "CaseIteam",
+  name: 'CaseIteam',
   components: {
     IconBase,
     ShowIcon,
@@ -45,36 +45,36 @@ export default {
   },
   props: {
     caseObj: {
-			type: Object,
-			default: () => {},
-		},
+      type: Object,
+      default: () => {},
+    },
   },
   computed: {
-    ...mapGetters("cases-tags", ["cardTags"]),
+    ...mapGetters('cases-tags', ['cardTags']),
   },
   methods: {
     imageSrc(preview) {
-      return require(`@/assets/img/cases/${preview}`);
+      return require(`@/assets/img/cases/${preview}`)
     },
     openCase(caseId) {
-      this.$router.push({ name: "case", params: { id: caseId } });
+      this.$router.push({ name: 'case', params: { id: caseId } })
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
 .case {
   width: 360px;
   background: #fff;
-  box-shadow: 0 7px 14px rgba($color: #000, $alpha: 0.08 );
+  box-shadow: 0 7px 14px rgba($color: #000, $alpha: 0.08);
   border-radius: 22px;
   overflow: hidden;
   transition: 0.25s ease-in-out;
   user-select: none;
   position: relative;
-	cursor: pointer;
-	&__img {
+  cursor: pointer;
+  &__img {
     width: 100%;
     height: 240px;
     display: flex;
@@ -101,8 +101,8 @@ export default {
   }
   &__title {
     font-size: 32px;
-		letter-spacing: 0.5px;
-		font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
     z-index: 1;
@@ -173,6 +173,9 @@ export default {
 
 @media (max-width: 400px) {
   .case {
+    &__title {
+      font-size: 24px;
+    }
     &__tag {
       font-size: 12px;
       border-radius: 7px;
