@@ -26,10 +26,12 @@ export default {
   css: [
 		"normalize.css",
 		"@/assets/styles/global.scss",
+		"boxicons/css/boxicons.min.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+		'@/plugins/vuesax',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
