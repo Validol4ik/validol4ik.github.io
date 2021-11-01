@@ -2,27 +2,28 @@
   <header class="header">
     <div class="container">
       <portfolio-profile />
-      <icons-list />
+      <site-settings />
     </div>
   </header>
 </template>
 
 <script>
-import PortfolioProfile from "./PortfolioProfile.vue";
-import IconsList from "@/components/global/IconsList.vue";
+import PortfolioProfile from './PortfolioProfile.vue'
+import SiteSettings from '@/components/header/SiteSettings.vue'
+
 export default {
-  name: "PortfolioHeader",
+  name: 'PortfolioHeader',
   components: {
     PortfolioProfile,
-    IconsList,
-  },
-};
+    SiteSettings
+  }
+}
 </script>
 
 <style lang="scss">
 .header {
   width: 100%;
-  padding: 25px 0;
+  padding: 20px 0;
   .container {
     display: flex;
     justify-content: space-between;

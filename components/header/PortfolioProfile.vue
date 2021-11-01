@@ -1,56 +1,33 @@
 <template>
   <nuxt-link class="profile" to="/">
-		<div class="img-wrapper">
-      <img class="image" src="@/assets/img/avatar.webp" alt="Portrait" />
-    </div>
-    <div class="wrapper">
+    <vs-avatar size="65">
+      <img src="@/assets/img/avatar.webp" alt />
+    </vs-avatar>
+    <div class="profile-data">
       <h5 class="profile__name">Polishchuk Valentyn</h5>
-      <span class="profile__specialization">Full stack Web Developer</span>
+      <span class="profile__post">Full stack Web Developer</span>
     </div>
-	</nuxt-link>
+  </nuxt-link>
 </template>
 
 <script>
 export default {
-  name: "PortfolioProfile",
-};
+  name: 'PortfolioProfile'
+}
 </script>
 
 <style lang="scss">
-
 .profile {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  .profile-data {
+    margin-left: 15px;
+  }
   &__name {
-    font-family: 'PTSans', sans-serif;
-		letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 10px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      display: inline-block;
-      width: 32px;
-      height: 1px;
-      background: #b02851;
-    }
+    font-size: 21px;
+    margin-bottom: 5px;
   }
-  &__specialization {
-    font-family: 'PTSans', sans-serif;
-    font-size: 17px;
-  }
-}
-.img-wrapper {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 30px;
-  overflow: hidden;
-  margin-right: 20px;
 }
 </style>
