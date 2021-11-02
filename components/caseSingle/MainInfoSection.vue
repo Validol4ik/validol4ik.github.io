@@ -6,14 +6,11 @@
           <img :src="imageSrc" class="image" alt="case image" />
         </div>
         <div class="info-wrapper">
-          <h1 class="case-single__title">
-            {{ caseObj.name }}
-          </h1>
-          <p class="case-single__desc">
-            {{ caseObj.description }}
-          </p>
-          <cont-avatars :membs="caseObj.contributors" />
-          <div class="flex-wrapper">
+          <h1 class="case-single__title">{{ caseObj.name }}</h1>
+          <p class="case-single__desc">{{ caseObj.description }}</p>
+          <!-- <cont-avatars :membs="caseObj.contributors" /> -->
+
+          <!-- <div class="flex-wrapper">
             <div class="view-project">
               <icon-base><show-icon /></icon-base>
               <a :href="caseObj.siteUrl" target="_blank">Visit the site</a>
@@ -25,7 +22,7 @@
           </div>
           <h4 class="price">
             The price of such a project is <span>{{ caseObj.price }}</span>
-          </h4>
+          </h4>-->
         </div>
       </div>
     </div>
@@ -33,31 +30,20 @@
 </template>
 
 <script>
-import ContAvatars from "@/components/caseSingle/ContAvatars";
-import IconBase from "@/components/global/icons/IconBase";
-import ShowIcon from "@/components/global/icons/ShowIcon.vue";
-import ClockIcon from "@/components/global/icons/ClockIcon.vue";
-
 export default {
-  name: "MainInfoSection",
-  components: {
-    ContAvatars,
-    ClockIcon,
-    ShowIcon,
-    IconBase,
-  },
+  name: 'MainInfoSection',
   props: {
     caseObj: {
-			type: Object,
-			default: () => {},
-		},
+      type: Object,
+      default: () => {}
+    }
   },
   computed: {
     imageSrc() {
-      return require(`@/assets/img/cases/${this.caseObj.image}`);
-    },
-  },
-};
+      return require(`@/assets/img/cases/${this.caseObj.image}`)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -65,11 +51,11 @@ export default {
   width: 100%;
   &__title {
     font-size: 36px;
-		font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   &__desc {
     line-height: 24px;
-		font-size: 18px;
+    font-size: 18px;
     margin-top: 30px;
   }
   &__img {
@@ -126,7 +112,7 @@ export default {
   }
 }
 .price {
-  font-family: "PTSans", sans-serif;
+  font-family: 'PTSans', sans-serif;
   font-size: 22px;
   margin-top: 60px;
   font-weight: 500;

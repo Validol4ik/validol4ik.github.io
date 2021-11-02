@@ -1,12 +1,4 @@
 <template>
-  <!-- <ul class="filter-tags">
-    <cases-tag
-      v-for="tag in casesTags"
-			:key="tag.id"
-			:tag-obj="tag"
-      @filter="updateTags"
-    />
-  </ul>-->
   <vs-select v-model="selected" class="filter-tags" filter multiple placeholder="Categories">
     <vs-option
       v-for="tag in casesTags"
@@ -19,13 +11,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-// import CasesTag from './CasesTag.vue'
 
 export default {
   name: 'FilterTags',
-  // components: {
-  //   CasesTag
-  // },
   data() {
     return {
       selected: []
@@ -34,17 +22,15 @@ export default {
   computed: {
     ...mapGetters('cases-tags', ['casesTags'])
   },
+  watch: {
+    selected() {
+      this.updateTags()
+    }
+  },
   methods: {
     ...mapActions('cases', ['fetchCases']),
-    updateTags(tagId, bool) {
-      if (bool) this.selectedTags.push(tagId)
-      else {
-        const elementIndex = this.selectedTags.findIndex(
-          (item) => item === tagId
-        )
-        this.selectedTags.splice(elementIndex, 1)
-      }
-      this.fetchCases(this.selectedTags)
+    updateTags() {
+      this.fetchCases(this.selected)
     }
   }
 }
@@ -58,17 +44,5 @@ export default {
 }
 .filter-tags {
   max-width: 300px;
-}
-
-@media (max-width: 1199px) {
-  .filter-tags {
-    padding: 0 100px;
-  }
-}
-
-@media (max-width: 991px) {
-  .filter-tags {
-    padding: 0;
-  }
 }
 </style>

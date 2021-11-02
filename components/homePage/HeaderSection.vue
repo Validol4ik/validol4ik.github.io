@@ -1,16 +1,16 @@
 <template>
   <section class="header-section">
-    <about-me />
+    <div class="container">
+      <div class="my-person">
+        <div class="my-person-about"></div>
+        <div class="my-person-portret"></div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
-import AboutMe from './AboutMe.vue'
-
 export default {
-  name: 'HeaderSection',
-  components: {
-    AboutMe
-  }
+  name: 'HeaderSection'
 }
 </script>

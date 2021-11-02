@@ -1,7 +1,7 @@
 <template>
   <section class="related">
     <div class="container">
-      <h2 class="related__title">{{ title }}</h2>
+      <h2 class="section-title">{{ title }}</h2>
       <cases-list :cases="relatedCases" />
     </div>
   </section>
@@ -13,17 +13,17 @@ import CasesList from '@/components/global/CasesList.vue'
 export default {
   name: 'RelatedCases',
   components: {
-    CasesList,
+    CasesList
   },
   props: {
     currentId: {
       type: Number,
-      default: () => undefined,
+      default: () => undefined
     },
     title: {
       type: String,
-      default: 'Other Cases',
-    },
+      default: 'Other Cases'
+    }
   },
   computed: {
     ...mapGetters('cases', ['cases']),
@@ -41,8 +41,8 @@ export default {
       }
 
       return randCases
-    },
-  },
+    }
+  }
 }
 </script>
 
