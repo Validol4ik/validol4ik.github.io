@@ -9,7 +9,11 @@
           <h1 class="case-single__title">{{ caseObj.name }}</h1>
           <p class="case-single__desc">{{ caseObj.description }}</p>
           <!-- <cont-avatars :membs="caseObj.contributors" /> -->
-
+          <vs-avatar-group max="6">
+            <vs-avatar v-for="member in caseObj.contributors" :key="member.id" size="65">
+              <img :src="avatarSrc(member.avatar)" alt />
+            </vs-avatar>
+          </vs-avatar-group>
           <!-- <div class="flex-wrapper">
             <div class="view-project">
               <icon-base><show-icon /></icon-base>
@@ -41,6 +45,11 @@ export default {
   computed: {
     imageSrc() {
       return require(`@/assets/img/cases/${this.caseObj.image}`)
+    }
+  },
+  methods: {
+    avatarSrc(image) {
+      return require(`@/assets/img/contributors/${image}`)
     }
   }
 }
