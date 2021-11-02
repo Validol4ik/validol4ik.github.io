@@ -1,16 +1,16 @@
 <template>
-  <section class="full header-section">
+  <section class="header-section">
     <about-me />
   </section>
 </template>
 
 <script>
-import AboutMe from "./AboutMe.vue";
+import AboutMe from './AboutMe.vue'
 
 export default {
-  name: "HeaderSection",
+  name: 'HeaderSection',
   components: {
-    AboutMe,
-  },
-};
+    AboutMe
+  }
+}
 </script>

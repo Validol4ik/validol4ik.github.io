@@ -1,26 +1,22 @@
 @import './fonts';
 
 /* vars */
-$bodyFz: 16px;
-$siteBg: #fff;
 $sans: 'PTSans', sans-serif;
 
+/* Default */
 * {
   box-sizing: border-box;
   outline: none;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body {
   overflow-x: hidden;
-  font-size: $bodyFz;
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  background: $siteBg;
+  background: #fff;
   font-family: $sans;
+	color: #2c3e50;
 }
 
 ul {
@@ -31,7 +27,7 @@ ul {
 
 a {
   text-decoration: none;
-	color: #000;
+	color: #2c3e50;
 }
 
 h1,
@@ -47,13 +43,7 @@ p {
 p {
   font-weight: 400;
   letter-spacing: 0.5px;
-  line-height: 28px;
-}
-
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
+	font-size: 16px;
 }
 
 .image {
@@ -65,55 +55,50 @@ button {
   object-fit: cover;
 }
 
-.container {
-  padding: 0 15px;
-  margin: 0 auto;
-  width: 1170px;
-}
-
-.full {
-  width: 100vw;
-  height: 100vh;
-}
 
 /* pages animation */
-
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.12s;
 }
 
 .page-enter,
 .page-leave-to {
-  opacity: 0;
+  opacity: 0.2;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+/* Snippets */
+
+.section-title {
+	font-size: 32px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 40px;
 }
 
-@media (max-width: 1199px) {
-  .container {
-    width: 990px;
-  }
+section {
+	padding: 60px 0;
 }
 
-@media (max-width: 991px) {
-  .container {
-    width: 750px;
-  }
-}
+/* Container */
+.container {
+	padding: 0 12px;
+	margin: 0 auto;
 
-@media (max-width: 767px) {
-  .container {
-    width: 570px;
-  }
-}
+	@media (min-width: 1200px) {
+		width: 1164px;
+	}
+	@media (min-width: 992px) and (max-width: 1199px) {
+		width: 984px;
+	}
+	@media (min-width: 768px) and (max-width: 991px) {
+		width: 744px;
+	}
 
-@media (max-width: 575px) {
-  .container {
-    width: 100%;
-  }
+	@media (min-width: 576px) and (max-width: 767px) {
+		width: 564px;
+	}
+
+	@media (max-width: 575px) {
+		width: 100%;
+	}
 }

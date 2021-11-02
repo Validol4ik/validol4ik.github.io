@@ -53,13 +53,15 @@ export default {
 
 <style lang="scss">
 .cases-list {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 450px;
-  justify-content: space-around;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 40px;
   .case {
-    margin-bottom: 50px;
+    .vs-card {
+      height: 100%;
+    }
     .deadline {
       margin-left: 3px;
     }
@@ -69,33 +71,6 @@ export default {
     p {
       line-height: 23px;
       font-size: 16px;
-    }
-  }
-}
-
-@media (max-width: 1199px) {
-  .cases-list {
-    justify-content: space-between;
-    padding: 0 80px;
-  }
-}
-
-@media (max-width: 991px) {
-  .cases-list {
-    justify-content: space-between;
-    padding: 0;
-    .case {
-      margin-bottom: 35px;
-      width: 345px;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .cases-list {
-    justify-content: space-around;
-    .case {
-      margin-bottom: 50px;
     }
   }
 }
