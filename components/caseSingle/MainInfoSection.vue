@@ -1,32 +1,34 @@
 <template>
   <section class="case-single">
     <div class="container">
-      <div class="flex-wrapper">
-        <div class="case-single__img">
+      <div class="case-content">
+        <div class="case-content__preview">
           <img :src="imageSrc('cases/' + project.image)" class="image" alt="case image" />
         </div>
-        <div class="info-wrapper">
-          <h1 class="case-single__title">{{ project.name }}</h1>
-          <p class="case-single__desc">{{ project.description }}</p>
-          <!-- <cont-avatars :membs="caseObj.contributors" /> -->
-          <vs-avatar-group max="6">
-            <vs-avatar v-for="member in project.contributors" :key="member.id" size="65">
-              <img :src="imageSrc('contributors/' + member.avatar)" alt />
-            </vs-avatar>
-          </vs-avatar-group>
-          <!-- <div class="flex-wrapper">
-            <div class="view-project">
-              <icon-base><show-icon /></icon-base>
-              <a :href="caseObj.siteUrl" target="_blank">Visit the site</a>
+        <div class="case-desc">
+          <h4 class="case-content__about">About the case</h4>
+          <h2 class="case-content__title">{{ project.name }}</h2>
+          <p class="case-content__desc">{{ project.description }}</p>
+          <div class="avatars">
+            <h6 class="case-content__members">Contributors</h6>
+            <vs-avatar-group max="6">
+              <vs-avatar v-for="member in project.contributors" :key="member.id" size="65">
+                <img :src="imageSrc('contributors/' + member.avatar)" alt />
+              </vs-avatar>
+            </vs-avatar-group>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <i class="task__icon bx bxs-notepad"></i>
+              <h6 class="task__title">Problem</h6>
+              <p class="task__text">{{ project.purpose }}</p>
             </div>
-            <div class="project-deadline">
-              <icon-base><clock-icon /></icon-base>
-              <span>Project deadline: {{ caseObj.time }}</span>
+            <div class="task">
+              <i class="task__icon bx bxs-message-square-check"></i>
+              <h6 class="task__title">Solution</h6>
+              <p class="task__text">{{ project.solution }}</p>
             </div>
           </div>
-          <h4 class="price">
-            The price of such a project is <span>{{ caseObj.price }}</span>
-          </h4>-->
         </div>
       </div>
     </div>
@@ -46,8 +48,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.case-single {
-  width: 100%;
+.case-content {
+  display: flex;
+  justify-content: space-between;
+  &__preview {
+    width: 38%;
+    height: 590px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .case-desc {
+    width: 56%;
+  }
+  &__about {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+    color: rgba($color: #000, $alpha: 0.2);
+  }
   &__title {
     font-size: 36px;
     font-family: 'Montserrat', sans-serif;
@@ -55,156 +76,31 @@ export default {
   &__desc {
     line-height: 24px;
     font-size: 18px;
-    margin-top: 30px;
+    margin: 30px 0 20px;
   }
-  &__img {
-    width: 35%;
-    height: 520px;
-    border-radius: 36px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
+  &__members {
+    font-size: 24px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+  }
+  .vs-avatar__group {
+    justify-content: flex-start;
   }
 }
-.flex-wrapper {
+
+.tasks {
   display: flex;
   justify-content: space-between;
-}
-.info-wrapper {
-  width: 58%;
-  display: flex;
-  flex-direction: column;
-  .flex-wrapper {
+  .task {
     margin-top: 30px;
-    align-items: center;
-  }
-}
-.project-deadline {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  svg {
-    width: 27px;
-    height: 27px;
-    margin-right: 10px;
-    transition: 0.2s;
-  }
-}
-.view-project {
-  display: flex;
-  align-items: center;
-  a {
-    color: #000;
-    text-decoration: underline;
-    font-size: 20px;
-  }
-  svg {
-    width: 27px;
-    height: 27px;
-    margin-right: 10px;
-    transition: 0.2s;
-  }
-  &:hover {
-    svg {
-      transform: scaleY(0);
+    width: 46%;
+    &__icon {
+      color: #e34a57;
+      font-size: 46px;
     }
-  }
-}
-.price {
-  font-family: 'PTSans', sans-serif;
-  font-size: 22px;
-  margin-top: 60px;
-  font-weight: 500;
-  span {
-    text-decoration: underline;
-  }
-}
-
-@media (max-width: 1199px) {
-  .case-single {
-    &__img {
-      width: 42%;
-      height: 500px;
-    }
-    .info-wrapper {
-      width: 50%;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  .case-single {
-    &__img {
-      display: none;
-    }
-    .info-wrapper {
-      width: 100%;
-    }
-  }
-}
-@media (max-width: 575px) {
-  .case-page {
-    padding: 0;
-  }
-  .case-single {
     &__title {
-      font-size: 34px;
-      letter-spacing: 1.2px;
-    }
-  }
-  .view-project {
-    a {
-      font-size: 18px;
-    }
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-  .project-deadline {
-    font-size: 18px;
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-  .price {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 430px) {
-  .case-single {
-    // &__title,
-    // &__desc {
-    //   text-align: center;
-    // }
-    .price {
-      text-align: center;
-      line-height: 27px;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .info-wrapper {
-    .flex-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      .project-deadline {
-        margin-bottom: 18px;
-        order: 1;
-      }
-      .view-project {
-        order: 2;
-        a {
-          font-size: 22px;
-        }
-        svg {
-          width: 26px;
-          height: 26px;
-        }
-      }
+      font-size: 24px;
+      margin: 10px 0 5px;
     }
   }
 }
