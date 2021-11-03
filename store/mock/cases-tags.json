@@ -1,32 +1,22 @@
 [
   {
     "id": 0,
-    "name": "store",
-    "casesIds": [0, 1]
+    "name": "landing",
+    "casesIds": [3]
   },
-  {
+	{
     "id": 1,
-    "name": "wordpress",
-    "casesIds": [1, 2]
+    "name": "store",
+    "casesIds": [0]
   },
-  {
+	{
     "id": 2,
-    "name": "tilda",
-    "casesIds": []
+    "name": "layout",
+    "casesIds": [3]
   },
-  {
+	{
     "id": 3,
     "name": "web app",
-    "casesIds": [0, 2, 4]
-  },
-  {
-    "id": 4,
-    "name": "layout",
-    "casesIds": [1, 3]
-  },
-  {
-    "id": 5,
-    "name": "design",
-    "casesIds": [1, 2]
+    "casesIds": [0, 1, 2]
   }
 ]

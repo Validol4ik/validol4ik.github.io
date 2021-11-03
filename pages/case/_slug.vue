@@ -1,30 +1,37 @@
 <template>
   <main id="case-views" class="main case-page">
-    <go-back-section />
-    <main-info-section :case-obj="dataObj" />
-    <related-cases :current-id="dataObj.id" />
-    <go-back-section />
+    <case-header />
+    <main-info-section />
+    <related-cases />
   </main>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import CaseHeader from '@/components/caseSingle/CaseHeader'
 import MainInfoSection from '@/components/caseSingle/MainInfoSection.vue'
-import GoBackSection from '@/components/global/GoBackSection.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases'
 
 export default {
   name: 'Case',
   components: {
+    CaseHeader,
     MainInfoSection,
-    GoBackSection,
     RelatedCases
   },
-  computed: {
-    ...mapGetters('cases', ['caseSingle']),
-    dataObj() {
-      return this.caseSingle(this.$route.params.slug)
+  provide() {
+    return {
+      project: this.caseSingle(this.$route.params.slug),
+      projectId: this.caseSingle(this.$route.params.slug).id
     }
+  },
+  data() {
+    return {
+      project: {}
+    }
+  },
+  computed: {
+    ...mapGetters('cases', ['caseSingle'])
   }
 }
 </script>

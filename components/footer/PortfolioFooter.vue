@@ -3,30 +3,27 @@
     <div class="container">
       <div class="content-wrapper">
         <icons-list />
-        <h3 class="footer__title">
-          Valentyn Polishchyk
-        </h3>
+        <h3 class="footer__title">Valentyn Polishchyk</h3>
       </div>
-      <span class="footer__rules">All rights reserved</span>
     </div>
   </footer>
 </template>
 
 <script>
-import IconsList from "@/components/global/IconsList.vue";
+import IconsList from '@/components/global/IconsList.vue'
 
 export default {
-  name: "PortfolioFooter",
+  name: 'PortfolioFooter',
   components: {
-    IconsList,
-  },
-};
+    IconsList
+  }
+}
 </script>
 
 <style lang="scss">
 .footer {
   width: 100vw;
-  padding: 50px 0;
+  padding: 40px 0;
   margin-top: 180px;
   background: #fff;
   box-shadow: 0 -40px 110px rgba(#000, 0.035);
@@ -41,18 +38,10 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
   }
   &__title {
     font-size: 24px;
-		font-family: "Montserrat", sans-serif;
-  }
-  &__rules {
-    font-family: "PTSans", sans-serif;
-    opacity: 0.8;
-  }
-  .icons-item {
-    margin: 0 13px 0 0;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 

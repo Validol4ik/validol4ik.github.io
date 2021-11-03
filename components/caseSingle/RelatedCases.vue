@@ -15,11 +15,8 @@ export default {
   components: {
     CasesList
   },
+  inject: ['projectId'],
   props: {
-    currentId: {
-      type: Number,
-      default: () => undefined
-    },
     title: {
       type: String,
       default: 'Other Cases'
@@ -30,7 +27,7 @@ export default {
     relatedCases() {
       const randCases = []
       const filteredCases = this.cases.filter(
-        (item) => item.id !== this.currentId
+        (item) => item.id !== this.projectId
       )
 
       while (randCases.length < 3) {

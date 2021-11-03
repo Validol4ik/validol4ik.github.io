@@ -83,6 +83,7 @@ section {
 .container {
 	padding: 0 12px;
 	margin: 0 auto;
+	position: relative;
 
 	@media (min-width: 1200px) {
 		width: 1164px;

@@ -23,7 +23,10 @@ export default {
 <style lang="scss">
 .header {
   width: 100%;
-  padding: 20px 0;
+  padding: 14px 0;
+  z-index: 5;
+  position: relative;
+  background: rgba($color: #fff, $alpha: 0.45);
   .container {
     display: flex;
     justify-content: space-between;

@@ -3,15 +3,15 @@
     <div class="container">
       <div class="flex-wrapper">
         <div class="case-single__img">
-          <img :src="imageSrc" class="image" alt="case image" />
+          <img :src="imageSrc('cases/' + project.image)" class="image" alt="case image" />
         </div>
         <div class="info-wrapper">
-          <h1 class="case-single__title">{{ caseObj.name }}</h1>
-          <p class="case-single__desc">{{ caseObj.description }}</p>
+          <h1 class="case-single__title">{{ project.name }}</h1>
+          <p class="case-single__desc">{{ project.description }}</p>
           <!-- <cont-avatars :membs="caseObj.contributors" /> -->
           <vs-avatar-group max="6">
-            <vs-avatar v-for="member in caseObj.contributors" :key="member.id" size="65">
-              <img :src="avatarSrc(member.avatar)" alt />
+            <vs-avatar v-for="member in project.contributors" :key="member.id" size="65">
+              <img :src="imageSrc('contributors/' + member.avatar)" alt />
             </vs-avatar>
           </vs-avatar-group>
           <!-- <div class="flex-wrapper">
@@ -36,20 +36,10 @@
 <script>
 export default {
   name: 'MainInfoSection',
-  props: {
-    caseObj: {
-      type: Object,
-      default: () => {}
-    }
-  },
-  computed: {
-    imageSrc() {
-      return require(`@/assets/img/cases/${this.caseObj.image}`)
-    }
-  },
+  inject: ['project'],
   methods: {
-    avatarSrc(image) {
-      return require(`@/assets/img/contributors/${image}`)
+    imageSrc(image) {
+      return require(`@/assets/img/${image}`)
     }
   }
 }
