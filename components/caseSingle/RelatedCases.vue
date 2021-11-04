@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss">
 .related {
-  margin: 120px 0 0;
   max-width: 100%;
   &__title {
     margin-bottom: 30px;

@@ -3,11 +3,11 @@
 		"id": 0,
     "slug": "book-store",
     "name": "Book Store",
-    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "excerpt": "",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante neque, sagittis et posuere et, volutpat at leo. Nam efficitur eget nibh in hendrerit. Curabitur ut consectetur mi. Suspendisse tempor molestie felis.",
     "siteUrl": "https://google.com",
-    "time": "3 month",
-    "price": "200$",
+    "time": "1 month",
+    "price": "500$",
     "preview": "book-store/book-store.webp",
     "image": "book-store/book-store-single.webp",
     "tags": [1, 3],
@@ -29,14 +29,20 @@
     "worksFields": [
       {
         "id": 0,
+				"title": "Aenean iaculis",
+				"excerpt": "Aenean iaculis eros justo, quis commodo mi faucibus",
         "description": "Aenean iaculis eros justo, quis commodo mi faucibus a. Morbi vitae est nunc. Suspendisse felis erat, venenatis nec luctus eget, tempor vel enim."
       },
       {
         "id": 1,
+				"title": "Nunc aliquet",
+				"excerpt": "Nunc aliquet dolor at eleifend sollicitudin",
         "description": "Nunc aliquet dolor at eleifend sollicitudin. Morbi pellentesque leo nec neque tincidunt, congue tristique nisl interdum."
       },
       {
         "id": 2,
+				"title": "Sed mauris leo",
+				"excerpt": "Sed mauris leo, congue dapibus neque id",
         "description": "Sed mauris leo, congue dapibus neque id, pellentesque sodales enim. Donec luctus condimentum orci, eu dapibus elit elementum a. Nunc nunc ex, pharetra nec finibus sit amet, cursus."
       }
     ]
@@ -66,14 +72,20 @@
     "worksFields": [
       {
         "id": 0,
+				"title": "Aenean iaculis",
+				"excerpt": "Aenean iaculis eros justo, quis commodo mi faucibus",
         "description": "Nam ultrices euismod leo, ac lacinia felis convallis id. In hac habitasse platea dictumst. Integer auctor, sapien et ornare gravida."
       },
       {
         "id": 1,
+				"title": "Quisque suscipit",
+				"excerpt": "Quisque suscipit, eros vitae fermentum porta",
         "description": "Quisque suscipit, eros vitae fermentum porta, augue turpis rhoncus orci, non rutrum nunc tellus et lorem. Suspendisse blandit malesuada erat nec tincidunt. Donec porttitor id mi sed luctus."
       },
       {
         "id": 2,
+				"title": "Mauris vulputate",
+				"excerpt": "Mauris vulputate tellus et turpis pretium",
         "description": "Mauris vulputate tellus et turpis pretium, ut rutrum ipsum varius. Ut rutrum dui ex, eu malesuada felis fermentum quis. Nam lobortis libero in orci rhoncus, vitae rutrum."
       }
     ]
@@ -103,14 +115,20 @@
     "worksFields": [
       {
         "id": 0,
+				"title": "Mauris vulputate",
+				"excerpt": "Mauris vulputate tellus et turpis pretium",
         "description": "Mauris pulvinar cursus eros, nec dictum nulla mattis eu. Pellentesque at volutpat sem, eu ullamcorper neque. Nunc nec risus tortor."
       },
       {
         "id": 1,
+				"title": "Duis sed mi",
+				"excerpt": "Duis sed mi eros. Suspendisse rhoncus augue velit",
         "description": "Duis sed mi eros. Suspendisse rhoncus augue velit, at finibus augue molestie dictum. Nullam nec iaculis libero. Nulla tempus."
       },
       {
         "id": 2,
+				"title": "Suspendisse",
+				"excerpt": "Suspendisse sed eros at ante mattis",
         "description": "Suspendisse sed eros at ante mattis blandit id in metus. Pellentesque sed metus quis augue dignissim sodales. Proin et libero odio."
       }
     ]
@@ -140,14 +158,20 @@
     "worksFields": [
       {
         "id": 0,
+				"title": "Donec aliquet",
+				"excerpt": "Donec aliquet ornare enim",
         "description": "Donec aliquet ornare enim. Aliquam tincidunt velit consectetur ligula viverra, in laoreet massa faucibus. Praesent finibus eros id lobortis facilisis. Nullam accumsan pharetra vulputate."
       },
       {
         "id": 1,
+				"title": "Quisque aliquam",
+				"excerpt": "Quisque aliquam sem metus, ut tempus eros feugiat id",
         "description": "Quisque aliquam sem metus, ut tempus eros feugiat id. Nullam ut pulvinar lorem. Aliquam consequat ipsum enim, in vulputate massa tempor vel."
       },
       {
         "id": 2,
+				"title": "Maecenas quis",
+				"excerpt": "Maecenas quis arcu eu dui elementum",
         "description": "Maecenas quis arcu eu dui elementum molestie eu sit amet lacus. Praesent accumsan sagittis dolor in facilisis. Vivamus et auctor tortor. Curabitur interdum eu elit a bibendum."
       }
     ]

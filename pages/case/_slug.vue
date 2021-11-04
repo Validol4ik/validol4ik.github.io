@@ -2,6 +2,7 @@
   <main id="case-views" class="main case-page">
     <case-header />
     <main-info-section />
+    <solved-tasks />
     <related-cases />
   </main>
 </template>
@@ -10,6 +11,7 @@
 import { mapGetters } from 'vuex'
 import CaseHeader from '@/components/caseSingle/CaseHeader'
 import MainInfoSection from '@/components/caseSingle/MainInfoSection.vue'
+import SolvedTasks from '@/components/caseSingle/SolvedTasks.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases'
 
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     CaseHeader,
     MainInfoSection,
+    SolvedTasks,
     RelatedCases
   },
   provide() {
