@@ -3,7 +3,7 @@
     <div class="container">
       <div class="pseudo-nav">
         <portfolio-profile />
-        <vs-select v-model="page" class="page-selector" placeholder="Select Page">
+        <vs-select v-model="page" danger class="page-selector" placeholder="Select Page">
           <vs-option label="Home" value="home">Home</vs-option>
           <vs-option label="About Me" value="about">About Me</vs-option>
         </vs-select>

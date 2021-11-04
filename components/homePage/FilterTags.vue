@@ -1,5 +1,5 @@
 <template>
-  <vs-select v-model="selected" class="filter-tags" filter multiple placeholder="Categories">
+  <vs-select v-model="selected" danger class="filter-tags" filter multiple placeholder="Categories">
     <vs-option
       v-for="tag in casesTags"
       :key="tag.id"

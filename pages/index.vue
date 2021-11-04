@@ -1,17 +1,17 @@
 <template>
   <main class="main home">
-    <header-section />
+    <about-me />
     <cases-section />
   </main>
 </template>
 
 <script>
-import HeaderSection from '@/components/homePage/HeaderSection'
 import CasesSection from '@/components/homePage/CasesSection'
+import AboutMe from '@/components/homePage/AboutMe.vue'
 
 export default {
   components: {
-    HeaderSection,
+    AboutMe,
     CasesSection
   }
 }

@@ -34,12 +34,11 @@ export default {
   .vs-button {
     i {
       font-size: 24px;
-      color: #000;
       transition: 0.2s;
     }
     &:hover {
       i {
-        color: #fff;
+        color: #000;
       }
     }
   }
