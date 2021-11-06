@@ -1,0 +1,22 @@
+.darkmode {
+	body {
+		background: #1D1427;
+		color: #fff;
+	}
+	footer {
+		background: #2c3e50;
+		box-shadow: none;
+		.soc-links {
+			.vs-button {
+				i {
+					color: #1D1427;
+				}
+				&:hover {
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

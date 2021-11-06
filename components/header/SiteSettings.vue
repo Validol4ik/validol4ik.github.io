@@ -1,8 +1,8 @@
 <template>
   <div class="site-settings">
-    <vs-switch v-model="darkMode" dark>
+    <vs-switch v-model="darkMode" danger>
       <template #circle>
-        <i v-if="!darkMode" class="bx bxs-moon"></i>
+        <i v-if="darkMode" class="bx bxs-moon"></i>
         <i v-else class="bx bxs-sun"></i>
       </template>
     </vs-switch>
@@ -21,6 +21,14 @@ export default {
       darkMode: false,
       lang: 'EN'
     }
+  },
+  watch: {
+    darkMode(dark) {
+      this.htmlTag.classList.toggle('darkmode')
+    }
+  },
+  beforeMount() {
+    this.htmlTag = document.querySelector('html')
   }
 }
 </script>

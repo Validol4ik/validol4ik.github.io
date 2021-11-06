@@ -1,22 +1,21 @@
 <template>
   <main class="main about">
-    <go-back-section />
+    <about-section />
     <skills-section />
     <related-cases title="Some of my projects" />
-    <go-back-section />
   </main>
 </template>
 
 <script>
 import SkillsSection from '@/components/aboutPage/SkillsSection.vue'
-import GoBackSection from '@/components/global/GoBackSection.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases.vue'
+import AboutSection from '@/components/aboutPage/AboutSection.vue'
 
 export default {
   components: {
     SkillsSection,
-    GoBackSection,
     RelatedCases,
-  },
+    AboutSection
+  }
 }
 </script>

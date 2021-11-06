@@ -38,7 +38,7 @@ export default {
     }
     &:hover {
       i {
-        color: #000;
+        color: #2c3e50;
       }
     }
   }

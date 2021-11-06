@@ -55,7 +55,6 @@ export default {
   padding: 14px 0;
   z-index: 5;
   position: relative;
-  background: rgba($color: #fff, $alpha: 0.45);
   .container {
     display: flex;
     justify-content: space-between;

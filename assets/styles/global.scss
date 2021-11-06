@@ -1,4 +1,5 @@
 @import './fonts';
+@import './darkmode';
 
 /* vars */
 $sans: 'PTSans', sans-serif;
@@ -17,6 +18,7 @@ body {
   background: #fff;
   font-family: $sans;
 	color: #2c3e50;
+	transition: 0.3s;
 }
 
 ul {
