@@ -61,8 +61,7 @@ export default {
     width: 60%;
     height: 80%;
     // z-index: -1;
-    background: rgba($color: #e34a57, $alpha: 0.4);
-    filter: blur(14px);
+    background: rgba($color: #e34a57, $alpha: 0.2);
   }
 }
 .bio {

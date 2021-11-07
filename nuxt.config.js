@@ -2,12 +2,6 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
-	loading: {
-    color: '#b02851',
-    height: '1px',
-		throttle: 0,
-  },
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Valenten Polishchyk | portfolio',
