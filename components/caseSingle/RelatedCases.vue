@@ -15,20 +15,27 @@ export default {
   components: {
     CasesList
   },
-  inject: ['projectId'],
   props: {
     title: {
       type: String,
       default: 'Other Cases'
+    },
+    projectId: {
+      type: Number,
+      default: () => null
     }
   },
   computed: {
     ...mapGetters('cases', ['cases']),
     relatedCases() {
       const randCases = []
-      const filteredCases = this.cases.filter(
-        (item) => item.id !== this.projectId
-      )
+      let filteredCases = ''
+
+      if (this.projectId) {
+        filteredCases = this.cases.filter((item) => item.id !== this.projectId)
+      } else {
+        filteredCases = this.cases
+      }
 
       while (randCases.length < 3) {
         const randNum = Math.floor(Math.random() * filteredCases.length)

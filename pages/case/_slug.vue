@@ -3,7 +3,7 @@
     <case-header />
     <main-info-section />
     <solved-tasks />
-    <related-cases />
+    <related-cases :project-id="caseSingle($route.params.slug).id" />
   </main>
 </template>
 
@@ -24,8 +24,7 @@ export default {
   },
   provide() {
     return {
-      project: this.caseSingle(this.$route.params.slug),
-      projectId: this.caseSingle(this.$route.params.slug).id
+      project: this.caseSingle(this.$route.params.slug)
     }
   },
   data() {
