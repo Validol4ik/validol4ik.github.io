@@ -12,6 +12,7 @@
     "lint": "yarn lint:js && yarn lint:style"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/pwa": "^3.3.5",
     "boxicons": "^2.0.9",
     "core-js": "^3.15.1",
