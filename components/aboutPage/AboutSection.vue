@@ -34,13 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-.pretitle {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
-  margin-bottom: 60px;
-  color: rgba(0, 0, 0, 0.2);
-}
 .flex-wrapper {
   display: flex;
   justify-content: space-between;

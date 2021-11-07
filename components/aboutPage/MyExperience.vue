@@ -41,6 +41,7 @@ export default {
   .exp-item {
     padding: 60px 35px;
     box-shadow: 0 8px 20px rgba($color: #000, $alpha: 0.07);
+    border-radius: 14px;
     &__title {
       font-weight: 700;
       font-family: 'Montserrat', sans-serif;
@@ -58,7 +59,6 @@ export default {
     }
     &.active {
       background: #e34a57;
-      transform: translateY(-10px);
       color: #fff;
     }
   }

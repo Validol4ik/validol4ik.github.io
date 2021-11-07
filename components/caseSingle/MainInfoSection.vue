@@ -6,7 +6,7 @@
           <img :src="imageSrc('cases/' + project.image)" class="image" alt="case image" />
         </div>
         <div class="case-desc">
-          <h4 class="case-content__about">About the case</h4>
+          <h4 class="pretitle">About the case</h4>
           <h2 class="case-content__title">{{ project.name }}</h2>
           <p class="case-content__desc">{{ project.description }}</p>
           <div class="avatars">
@@ -61,13 +61,6 @@ export default {
   }
   .case-desc {
     width: 56%;
-  }
-  &__about {
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
-    margin-bottom: 60px;
-    color: rgba($color: #000, $alpha: 0.2);
   }
   &__title {
     font-size: 36px;

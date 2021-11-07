@@ -55,6 +55,8 @@ export default {
   padding: 14px 0;
   z-index: 5;
   position: relative;
+  background: rgba($color: #fff, $alpha: 0.8);
+  transition: 0.29s;
   .container {
     display: flex;
     justify-content: space-between;

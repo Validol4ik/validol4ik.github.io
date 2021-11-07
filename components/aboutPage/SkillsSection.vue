@@ -75,6 +75,7 @@ export default {
 .skill {
   padding: 20px 35px;
   box-shadow: 0 8px 20px rgba($color: #000, $alpha: 0.07);
+  border-radius: 14px;
 
   &__title {
     font-family: 'Montserrat', sans-serif;
