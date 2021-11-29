@@ -1,0 +1,42 @@
+[
+  {
+		"id": 0,
+    "slug": "book-store",
+    "name": "Book Store",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "siteUrl": "https://google.com",
+    "time": "1 month",
+    "preview": "book-store/book-store.webp",
+    "tags": [1, 3]
+  },
+	{
+		"id": 1,
+    "slug": "movies",
+    "name": "TOP 250 Movies",
+    "excerpt": "Cras ultrices orci sed faucibus condimentum. Nulla a facilisis erat, quis ornare nulla. Nam lacus elit, rutrum.",
+    "siteUrl": "https://validol4ik.github.io/250movies",
+    "time": "7 days",
+    "preview": "movies/movies.webp",
+    "tags": [3]
+  },
+	{
+		"id": 2,
+    "slug": "ziko-agency",
+    "name": "Ziko Agency",
+    "excerpt": "Nullam eu ornare ipsum. Nullam tempus eleifend lacus.",
+    "siteUrl": "http://spartaagency.biz",
+    "time": "2 month",
+    "preview": "ziko/ziko.webp",
+    "tags": [3]
+  },
+  {
+		"id": 3,
+    "slug": "lucid-theme",
+    "name": "Lucid Theme",
+    "excerpt": "Phasellus non tincidunt nisi. Aliquam eu pharetra mi, eget viverra nibh.",
+    "siteUrl": "https://validol4ik.github.io/lucid",
+    "time": "4 days",
+    "preview": "lucid/lucid.webp",
+    "tags": [0, 2]
+  }
+]
