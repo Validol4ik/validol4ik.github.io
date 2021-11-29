@@ -27,38 +27,38 @@ export default {
         {
           id: 0,
           title: 'JavaScript',
-          value: '70',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+          value: '85',
+          desc: 'I had many experiance with js. Now it is my favorite language'
         },
         {
           id: 1,
-          title: 'Vue / Vuex',
+          title: 'Vue 2/3',
           value: '80',
-          desc: 'Donec hendrerit nulla consequat neque dignissim'
+          desc: 'I have 3 months of experiance developing web apps with vue'
         },
         {
           id: 2,
           title: 'Nuxt',
-          value: '80',
-          desc: 'Nullam convallis finibus lorem, et congue sem ultricies eu'
+          value: '70',
+          desc: 'I use the framework as default. I realy used to use it'
         },
         {
           id: 3,
-          title: 'Quasar framework',
-          value: '70',
-          desc: 'Quisque id condimentum tortor, in euismod ante'
+          title: 'WordPress',
+          value: '80',
+          desc: "I don't like to work with WordPress, but it is good solution for small projects"
         },
         {
           id: 4,
-          title: 'Strapi',
-          value: '60',
-          desc: 'Aliquam in dolor at eros vehicula placerat'
+          title: 'Web design',
+          value: '50',
+          desc: 'I love creative and I get experience every day'
         },
         {
           id: 5,
-          title: 'Web design',
-          value: '60',
-          desc: 'Etiam maximus purus vulputate urna lobortis'
+          title: 'English',
+          value: '45',
+          desc: 'Now my level is B1. I study hard to improve the level'
         }
       ]
     }

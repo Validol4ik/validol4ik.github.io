@@ -27,8 +27,8 @@ export default {
         {
           id: 0,
           title: 'InternetDevels',
-          time: '2020 - now',
-          desc: 'Developed frontend and backend for web applications. Sometimes I developed sites on WordPres',
+          time: '2021 - now',
+          desc: 'Developed web applications and sites on CMS WordPress.',
           active: true
         }
       ],

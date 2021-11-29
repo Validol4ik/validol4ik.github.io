@@ -22,7 +22,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: () => 'Work experience'
+      default: () => 'My Work experience'
     },
     list: {
       type: Array,
