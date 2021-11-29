@@ -28,20 +28,15 @@ export default {
   computed: {
     ...mapGetters('cases', ['cases']),
     relatedCases() {
-      const randCases = []
-      let filteredCases = ''
+      const randCases = new Set()
+      const filteredCases = this.projectId
+        ? this.cases.filter((item) => item.id !== this.projectId)
+        : this.cases
 
-      if (this.projectId) {
-        filteredCases = this.cases.filter((item) => item.id !== this.projectId)
-      } else {
-        filteredCases = this.cases
-      }
-
-      while (randCases.length < 3) {
+      while (randCases.size < 3) {
         const randNum = Math.floor(Math.random() * filteredCases.length)
 
-        if (randCases.includes(filteredCases[randNum])) continue
-        else randCases.push(filteredCases[randNum])
+        randCases.add(filteredCases[randNum])
       }
 
       return randCases
