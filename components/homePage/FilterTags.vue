@@ -24,24 +24,16 @@ export default {
   },
   watch: {
     selected() {
-      this.updateTags()
+      this.fetchCases(this.selected)
     }
   },
   methods: {
-    ...mapActions('cases', ['fetchCases']),
-    updateTags() {
-      this.fetchCases(this.selected)
-    }
+    ...mapActions('cases', ['fetchCases'])
   }
 }
 </script>
 
 <style lang="scss">
-.tags-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .filter-tags {
   max-width: 300px;
 }

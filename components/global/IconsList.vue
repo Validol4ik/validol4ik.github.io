@@ -1,29 +1,40 @@
 <template>
   <ul class="soc-links">
-    <vs-button href="https://t.me/valiidol4ik" blank icon size="large" danger>
-      <i class="bx bxl-telegram"></i>
-    </vs-button>
-    <vs-button href="https://www.instagram.com/valentynpolishchyk" blank icon size="large" danger>
-      <i class="bx bxl-instagram-alt"></i>
-    </vs-button>
-    <vs-button
-      href="https://www.linkedin.com/in/valentyn-polishchyk-8a2435217/"
-      blank
-      icon
-      size="large"
-      danger
-    >
-      <i class="bx bxl-linkedin"></i>
-    </vs-button>
-    <vs-button href="https://github.com/validol4ik" blank icon size="large" danger>
-      <i class="bx bxl-github"></i>
+    <vs-button v-for="link in list" :key="link.id" :href="link.url" blank icon size="large" danger>
+      <i :class="['bx', link.name] "></i>
     </vs-button>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'IconsList'
+  name: 'IconsList',
+  data() {
+    return {
+      list: [
+        {
+          id: 0,
+          name: 'bxl-telegram',
+          url: 'https://t.me/valiidol4ik'
+        },
+        {
+          id: 1,
+          name: 'bxl-instagram-alt',
+          url: 'https://www.instagram.com/valentynpolishchyk'
+        },
+        {
+          id: 2,
+          name: 'bxl-linkedin',
+          url: 'https://www.linkedin.com/in/valentyn-polishchyk-8a2435217/'
+        },
+        {
+          id: 3,
+          name: 'bxl-github',
+          url: 'https://github.com/validol4ik'
+        }
+      ]
+    }
+  }
 }
 </script>
 

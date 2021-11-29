@@ -4,16 +4,16 @@
       v-for="project in cases"
       :key="project.slug"
       class="case"
-      @click="openCase(project.slug)"
+      @click="$router.push({ path: `/case/${project.slug}` })"
     >
       <template #title>
-        <h3>{{ project.name }}</h3>
+        <h3 class="case__title">{{ project.name }}</h3>
       </template>
       <template #img>
-        <img :src="imageSrc(project.preview)" alt />
+        <img :src="require(`@/assets/img/cases/${project.preview}`)" alt="Project preview" />
       </template>
       <template #text>
-        <p>{{ project.excerpt }}</p>
+        <p class="case__excerpt">{{ project.excerpt }}</p>
       </template>
       <template #interactions>
         <vs-button icon shadow>
@@ -39,14 +39,6 @@ export default {
       type: Array,
       default: () => []
     }
-  },
-  methods: {
-    imageSrc(preview) {
-      return require(`@/assets/img/cases/${preview}`)
-    },
-    openCase(slug) {
-      this.$router.push({ path: `/case/${slug}` })
-    }
   }
 }
 </script>
@@ -55,8 +47,7 @@ export default {
 .cases-list {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template: auto / repeat(3, 1fr);
   gap: 40px;
   .case {
     .vs-card {
@@ -65,10 +56,10 @@ export default {
     .deadline {
       margin-left: 3px;
     }
-    h3 {
+    &__title {
       font-size: 24px;
     }
-    p {
+    &__excerpt {
       line-height: 23px;
       font-size: 16px;
     }
