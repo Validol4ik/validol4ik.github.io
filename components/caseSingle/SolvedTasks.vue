@@ -10,11 +10,11 @@
           @click="active = task.id"
         >
           <h4 class="task__title">{{task.title}}</h4>
-          <p class="task__desc">{{task.excerpt}}</p>
+          <p class="task__excerpt">{{task.excerpt}}</p>
         </li>
       </ul>
       <div class="tasks-view">
-        <p class="task__content">{{project.worksFields[active].description}}</p>
+        <p class="task__text">{{project.worksFields[active].description}}</p>
       </div>
     </div>
   </section>

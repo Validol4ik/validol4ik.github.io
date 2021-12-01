@@ -20,7 +20,7 @@ export default {
       type: String,
       default: 'Other Cases'
     },
-    projectId: {
+    projectSlug: {
       type: Number,
       default: () => null
     }
@@ -29,8 +29,8 @@ export default {
     ...mapGetters('cases', ['cases']),
     relatedCases() {
       const randCases = new Set()
-      const filteredCases = this.projectId
-        ? this.cases.filter((item) => item.id !== this.projectId)
+      const filteredCases = this.projectSlug
+        ? this.cases.filter((item) => item.slug !== this.projectSlug)
         : this.cases
 
       while (randCases.size < 3) {

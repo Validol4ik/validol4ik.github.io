@@ -3,7 +3,7 @@
     <case-header />
     <main-info-section />
     <solved-tasks />
-    <related-cases :project-id="caseSingle($route.params.slug).id" />
+    <related-cases :project-slug="$route.params.slug" />
   </main>
 </template>
 
@@ -27,18 +27,13 @@ export default {
       project: this.caseSingle(this.$route.params.slug)
     }
   },
-  data() {
-    return {
-      project: {}
-    }
-  },
   computed: {
     ...mapGetters('cases', ['caseSingle'])
   }
 }
 </script>
 
-<style lang="scss">
+<style>
 @media (min-width: 576px) {
   .case-page {
     padding: 20px 0;
