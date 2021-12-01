@@ -1,7 +1,4 @@
 export default {
 	cases: ({ cases }) => cases,
-	caseSingle: ({ cases }) => (slug) => {
-		const caseById = cases.find((caseSingle) => caseSingle.slug === slug);
-		return caseById;
-	},
+	caseSingle: ({ cases }) => (slug) => cases.find((caseSingle) => caseSingle.slug === slug)
 }
