@@ -42,6 +42,21 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .main-about {
   .position-wrapper {
     display: flex;
@@ -58,6 +73,7 @@ export default {
     &::after {
       content: '_';
       color: #e34a57;
+      animation: blink 1.2s ease-in-out 0.4s infinite, both;
     }
   }
   &__preview {
