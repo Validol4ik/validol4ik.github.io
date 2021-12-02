@@ -8,12 +8,7 @@
             class="developer__desc"
           >Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at finibus elit.</p>
           <ul class="services">
-            <li class="service">Web app</li>
-            <li class="service">Wordpress</li>
-            <li class="service">Landing</li>
-            <li class="service">Store</li>
-            <li class="service">Layout</li>
-            <li class="service">Design</li>
+            <li v-for="service in casesTags" :key="service.id" class="service">{{service.name}}</li>
           </ul>
           <div class="nav-buttons">
             <vs-button class="nav-btn" danger size="large" @click="down()">
@@ -30,8 +25,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'AboutMe',
+  computed: {
+    ...mapGetters('cases-tags', ['casesTags'])
+  },
   methods: {
     down() {
       const cases = document.getElementById('cases-hook')
