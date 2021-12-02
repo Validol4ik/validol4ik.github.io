@@ -1,6 +1,14 @@
 import cases from "../mock/cases";
 
 export default {
+	fillCasesStore: async ({commit}) => {
+		const response = await fetch('db/cases/cases.json')
+
+		const cases = await response.json()
+		if (cases) {
+			commit('updateCases', cases)
+		}
+	},
 	fetchCases: ({ commit }, tagsIds) => {
 		if (tagsIds.length > 0) {
 			const newCases = [];
@@ -13,7 +21,7 @@ export default {
 					}
 				}
 			}
-			commit("changeCases", newCases);
-		} else commit("changeCases", cases);
+			commit("updateCases", newCases);
+		} else commit("updateCases", cases);
 	},
 }

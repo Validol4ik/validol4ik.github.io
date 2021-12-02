@@ -18,9 +18,11 @@ export default {
   },
   mounted() {
     this.fillTagsStore()
+    this.fillCasesStore()
   },
   methods: {
-    ...mapActions('cases-tags', ['fillTagsStore'])
+    ...mapActions('cases-tags', ['fillTagsStore']),
+    ...mapActions('cases', ['fillCasesStore'])
   }
 }
 </script>

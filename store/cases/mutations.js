@@ -1,5 +1,5 @@
 export default {
-	changeCases: (state, newCases) => {
+	updateCases: (state, newCases) => {
 		state.cases = newCases;
 	},
 }
