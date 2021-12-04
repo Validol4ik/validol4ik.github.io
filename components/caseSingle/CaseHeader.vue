@@ -35,9 +35,17 @@
 <script>
 export default {
   name: 'CaseHeader',
-  inject: ['project'],
+  props: {
+    project: {
+      type: Object,
+      default: () => {}
+    }
+  },
   computed: {
     imgStyle() {
+      if (!this.project.preview) {
+        return ''
+      }
       return {
         background: `center / cover no-repeat url("${require(`@/assets/img/cases/${this.project.preview}`)}") fixed`
       }
@@ -95,8 +103,7 @@ export default {
       font-size: 24px;
     }
     &__btn {
-      font-size: 20px;
-      padding: 4px 0;
+      padding: 4px 2px;
     }
   }
 }
