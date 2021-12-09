@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import SkillsSection from '@/components/aboutPage/SkillsSection.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases.vue'
 import AboutSection from '@/components/aboutPage/AboutSection.vue'
@@ -54,6 +55,12 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.fillCasesStore()
+  },
+  methods: {
+    ...mapActions('cases', ['fillCasesStore'])
   }
 }
 </script>

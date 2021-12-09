@@ -1,6 +1,6 @@
 export default {
 	fillCasesStore: async ({commit}) => {
-		const response = await fetch('/db/cases/cases.json')
+		const response = await fetch('/db/cases.json')
 
 		const cases = await response.json()
 		if (cases) {

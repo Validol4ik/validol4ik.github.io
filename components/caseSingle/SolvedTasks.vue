@@ -6,15 +6,15 @@
         <li
           v-for="task in project.worksFields"
           :key="task.id"
-          :class="['task', {active: active == task.id}]"
+          :class="['task', { active: active == task.id }]"
           @click="active = task.id"
         >
-          <h4 class="task__title">{{task.title}}</h4>
-          <p class="task__excerpt">{{task.excerpt}}</p>
+          <h4 class="task__title">{{ task.title }}</h4>
+          <p class="task__excerpt">{{ task.excerpt }}</p>
         </li>
       </ul>
       <div class="tasks-view">
-        <p class="task__text">{{project.worksFields[active].description}}</p>
+        <p class="task__text">{{ project.worksFields[active].description }}</p>
       </div>
     </div>
   </section>

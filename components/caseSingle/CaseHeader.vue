@@ -2,19 +2,19 @@
   <section class="case-header">
     <div class="container">
       <div class="header-content">
-        <h1 class="case-header__title">{{project.name}}</h1>
+        <h1 class="case-header__title">{{ project.name }}</h1>
         <ul class="case-stats">
           <li class="stat">
             <p class="stat__title">Type of project</p>
-            <h3 class="stat__value">{{project.type}}</h3>
+            <h3 class="stat__value">{{ project.type }}</h3>
           </li>
           <li class="stat">
             <p class="stat__title">Deadline</p>
-            <h3 class="stat__value">{{project.time}}</h3>
+            <h3 class="stat__value">{{ project.time }}</h3>
           </li>
           <li class="stat">
             <p class="stat__title">Budget</p>
-            <h3 class="stat__value">{{project.price}}</h3>
+            <h3 class="stat__value">{{ project.price }}</h3>
           </li>
           <li v-if="project.siteUrl" class="stat">
             <vs-button
@@ -23,7 +23,8 @@
               size="large"
               blank
               danger
-            >Visit the site</vs-button>
+              >Visit the site</vs-button
+            >
           </li>
         </ul>
       </div>
@@ -35,12 +36,7 @@
 <script>
 export default {
   name: 'CaseHeader',
-  props: {
-    project: {
-      type: Object,
-      default: () => {}
-    }
-  },
+  inject: ['project'],
   computed: {
     imgStyle() {
       if (!this.project.preview) {

@@ -4,21 +4,31 @@
       <div class="position-wrapper">
         <div class="developer">
           <h1 class="developer__name">Who am I</h1>
-          <p
-            class="developer__desc"
-          >Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at finibus elit.</p>
+          <p class="developer__desc">
+            Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut
+            sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at
+            finibus elit.
+          </p>
           <ul class="services">
-            <li v-for="service in casesTags" :key="service.id" class="service">{{service.name}}</li>
+            <li v-for="service in casesTags" :key="service.id" class="service">
+              {{ service.name }}
+            </li>
           </ul>
           <div class="nav-buttons">
             <vs-button class="nav-btn" danger size="large" @click="down()">
               Projects
               <i class="bx bxs-down-arrow"></i>
             </vs-button>
-            <vs-button to="/about" class="nav-btn" danger size="large" border>About</vs-button>
+            <vs-button to="/about" class="nav-btn" danger size="large" border
+              >About me</vs-button
+            >
           </div>
         </div>
-        <img src="@/assets/img/mask.png" class="developer__preview" alt="My portret" />
+        <img
+          src="@/assets/img/mask.png"
+          class="developer__preview"
+          alt="My portret"
+        />
       </div>
     </div>
   </section>
