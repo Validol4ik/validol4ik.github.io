@@ -21,7 +21,7 @@ export default {
       default: 'Other Cases'
     },
     projectSlug: {
-      type: Number,
+      type: String,
       default: () => null
     }
   },

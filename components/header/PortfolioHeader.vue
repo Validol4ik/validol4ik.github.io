@@ -34,10 +34,13 @@ export default {
     align-items: center;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .header {
     .container {
       flex-direction: column;
+    }
+    .profile {
+      margin-bottom: 20px;
     }
   }
 }

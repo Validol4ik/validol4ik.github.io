@@ -22,19 +22,11 @@ export default {
 
 <style lang="scss">
 .footer {
-  width: 100vw;
   padding: 40px 0;
   margin-top: 180px;
   background: #fff;
   box-shadow: 0 -40px 110px rgba(#000, 0.035);
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
   .content-wrapper {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,18 +37,14 @@ export default {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .footer {
     .content-wrapper {
       flex-direction: column;
-      align-items: center;
     }
     &__title {
-      order: 1;
       text-align: center;
-    }
-    .icons-list {
-      order: 2;
+      margin-top: 20px;
     }
   }
 }

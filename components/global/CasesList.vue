@@ -10,7 +10,10 @@
         <h3 class="case__title">{{ project.name }}</h3>
       </template>
       <template #img>
-        <img :src="require(`@/assets/img/cases/${project.preview}`)" alt="Project preview" />
+        <img
+          :src="require(`@/assets/img/cases/${project.preview}`)"
+          alt="Project preview"
+        />
       </template>
       <template #text>
         <p class="case__excerpt">{{ project.excerpt }}</p>
@@ -36,7 +39,7 @@ export default {
   name: 'CasesList',
   props: {
     cases: {
-      type: Array,
+      type: [Array, Set],
       default: () => []
     }
   }
