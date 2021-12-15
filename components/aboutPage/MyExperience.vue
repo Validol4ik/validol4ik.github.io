@@ -38,6 +38,19 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 46px;
 
+  @media (max-width: 1199px) {
+    gap: 22px;
+  }
+
+  @media (max-width: 991px) {
+    gap: 46px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
   .exp-item {
     padding: 60px 35px;
     box-shadow: 0 8px 20px rgba($color: #000, $alpha: 0.07);
@@ -50,7 +63,7 @@ export default {
       margin-bottom: 18px;
     }
     &__time {
-      font-size: 22px;
+      font-size: 20px;
       font-family: 'PTSans', sans-serif;
     }
     &__desc {
@@ -60,6 +73,15 @@ export default {
     &.active {
       background: #e34a57;
       color: #fff;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      padding: 40px 20px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 335px;
+      margin: 0 auto;
+      padding: 45px 25px;
     }
   }
 }
