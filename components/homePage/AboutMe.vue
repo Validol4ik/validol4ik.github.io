@@ -10,25 +10,17 @@
             finibus elit.
           </p>
           <ul class="services">
-            <li v-for="service in casesTags" :key="service.id" class="service">
-              {{ service.name }}
-            </li>
+            <li v-for="service in casesTags" :key="service.id" class="service">{{ service.name }}</li>
           </ul>
           <div class="nav-buttons">
             <vs-button class="nav-btn" danger size="large" @click="down()">
               Projects
               <i class="bx bxs-down-arrow"></i>
             </vs-button>
-            <vs-button to="/about" class="nav-btn" danger size="large" border
-              >About me</vs-button
-            >
+            <vs-button to="/about" class="nav-btn" danger size="large" border>About me</vs-button>
           </div>
         </div>
-        <img
-          src="@/assets/img/mask.png"
-          class="developer__preview"
-          alt="My portret"
-        />
+        <img src="@/assets/img/mask.png" class="developer__preview" alt="My portret" />
       </div>
     </div>
   </section>
@@ -73,6 +65,9 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  @media (max-width: 339px) {
+    padding-top: 20px;
+  }
 }
 .developer {
   width: 52%;
@@ -89,6 +84,25 @@ export default {
   &__preview {
     width: 34%;
   }
+
+  @media (max-width: 991px) {
+    width: 80%;
+    &__preview {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+    &__name {
+      font-size: 48px;
+    }
+  }
+  @media (max-width: 575px) {
+    &__name {
+      font-size: 42px;
+    }
+  }
 }
 .services {
   margin-top: 30px;
@@ -97,6 +111,14 @@ export default {
   .service {
     font-weight: 700;
     font-size: 18px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 46px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .service {
+      margin: 2px 12px;
+    }
   }
 }
 .nav-buttons {
@@ -108,6 +130,10 @@ export default {
       transform: translateY(1px);
       margin-left: 4px;
     }
+  }
+  @media (max-width: 767px) {
+    margin-top: 46px;
+    justify-content: center;
   }
 }
 </style>
