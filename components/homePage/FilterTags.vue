@@ -36,5 +36,8 @@ export default {
 <style lang="scss">
 .filter-tags {
   max-width: 300px;
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
 }
 </style>

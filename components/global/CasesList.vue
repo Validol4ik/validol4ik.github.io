@@ -10,10 +10,7 @@
         <h3 class="case__title">{{ project.name }}</h3>
       </template>
       <template #img>
-        <img
-          :src="require(`@/assets/img/cases/${project.preview}`)"
-          alt="Project preview"
-        />
+        <img :src="require(`@/assets/img/cases/${project.preview}`)" alt="Project preview" />
       </template>
       <template #text>
         <p class="case__excerpt">{{ project.excerpt }}</p>
@@ -65,6 +62,17 @@ export default {
     &__excerpt {
       line-height: 23px;
       font-size: 16px;
+    }
+  }
+  @media (max-width: 1199px) {
+    grid-template: auto / repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template: auto / 1fr;
+    .case {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
