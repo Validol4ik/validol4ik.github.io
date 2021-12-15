@@ -71,6 +71,19 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 46px;
+  @media (max-width: 1199px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 46px 150px;
+  }
+  @media (max-width: 991px) {
+    gap: 40px;
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 359px) {
+    gap: 30px;
+  }
 }
 .skill {
   padding: 20px 35px;
@@ -119,6 +132,15 @@ export default {
     font-size: 15px;
     text-align: center;
     padding: 0 20px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 359px) {
+    padding: 20px;
   }
 }
 </style>
