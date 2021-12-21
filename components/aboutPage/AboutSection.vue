@@ -34,6 +34,25 @@ export default {
   width: 25%;
   position: relative;
   border-radius: 16px;
+	@media (max-width: 1199px) {
+		width: 28%;
+	}
+	@media (max-width: 991px) {
+		width: 33%;
+		height: 400px;
+	}
+	@media (max-width: 767px) {
+		width: 44%;
+		height: 420px;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media (max-width: 575px) {
+		width: 250px;
+		height: 420px;
+	}
 }
 
 .bio {
@@ -41,6 +60,13 @@ export default {
   .bio-full-name {
     margin-top: 40px;
     line-height: 65px;
+
+		@media (max-width: 767px) {
+			line-height: 30px;
+		}
+		@media (max-width: 375px) {
+			line-height: 20px;
+		}
   }
   &__title {
     font-family: 'Montserrat', sans-serif;
@@ -72,5 +98,88 @@ export default {
     letter-spacing: 1px;
     padding-right: 80px;
   }
+	@media (max-width: 1199px) {
+		width: 64%;
+		&__desc {
+    	padding-right: 50px;
+  	}
+	}
+	@media (max-width: 991px) {
+		width: 60%;
+		&__desc {
+    	padding-right: 0;
+			margin-top: 20px;
+			font-size: 18px;
+			line-height: 27px;
+			letter-spacing: 0.5px;
+  	}
+		&__title {
+			font-size: 38px;
+			letter-spacing: 9px;
+
+			&:last-child {
+				margin-left: 80px;
+			}
+
+			&::before {
+				left: -4%;
+				height: 24%;
+				width: 105%;
+			}
+  	}
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		padding-top: 220px;
+		z-index: 5;
+		&__title {
+			display: block;
+			width: 80%;
+			margin-left: 10%;
+			&:last-child {
+				margin-left: 10%;
+				text-align: right;
+			}
+			&::before {
+				height: 52%;
+				top: 40%;
+				background: rgba($color: #e34a57, $alpha: 0.7);
+			}
+  	}
+		&__desc {
+    	margin-top: 80px;
+			font-size: 20px;
+  	}
+	}
+	@media (max-width: 575px) {
+		&__title {
+			display: block;
+			width: 95%;
+			margin: 0 15px;
+			&:last-child {
+				margin: 0 15px;
+				padding-left: 0;
+				text-align: right;
+			}
+  	}
+		&__desc {
+    	text-align: center;
+  	}
+	}
+	@media (max-width: 375px) {
+		padding-top: 250px;
+		&__title {
+			font-size: 35px;
+			letter-spacing: 7px;
+			&::before {
+				height: 90%;
+				top: 30%;
+				background: rgba($color: #e34a57, $alpha: 0.7);
+			}
+  	}
+		&__desc {
+    	font-size: 18px;
+  	}
+	}
 }
 </style>

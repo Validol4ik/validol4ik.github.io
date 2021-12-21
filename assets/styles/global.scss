@@ -17,8 +17,8 @@ body {
   padding: 0;
   background: #fff;
   font-family: $sans;
-	color: #2c3e50;
-	transition: 0.3s;
+  color: #2c3e50;
+  transition: 0.3s;
 }
 
 ul {
@@ -29,7 +29,7 @@ ul {
 
 a {
   text-decoration: none;
-	color: #2c3e50;
+  color: #2c3e50;
 }
 
 h1,
@@ -45,7 +45,7 @@ p {
 p {
   font-weight: 400;
   letter-spacing: 0.5px;
-	font-size: 16px;
+  font-size: 16px;
 }
 
 .image {
@@ -56,7 +56,6 @@ p {
   height: 100%;
   object-fit: cover;
 }
-
 
 /* pages animation */
 .page-enter-active,
@@ -72,13 +71,13 @@ p {
 /* Snippets */
 
 .section-title {
-	font-size: 32px;
-	font-family: 'Montserrat', sans-serif;
-	margin-bottom: 40px;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 40px;
 
-	@media (max-width: 767px) {
-		text-align: center;
-	}
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .pretitle {
@@ -87,33 +86,36 @@ p {
   letter-spacing: 0.5px;
   margin-bottom: 60px;
   color: rgba(0, 0, 0, 0.2);
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 section {
-	padding: 60px 0;
+  padding: 60px 0;
 }
 
 /* Container */
 .container {
-	padding: 0 12px;
-	margin: 0 auto;
-	position: relative;
+  padding: 0 12px;
+  margin: 0 auto;
+  position: relative;
 
-	@media (min-width: 1200px) {
-		width: 1164px;
-	}
-	@media (min-width: 992px) and (max-width: 1199px) {
-		width: 984px;
-	}
-	@media (min-width: 768px) and (max-width: 991px) {
-		width: 744px;
-	}
+  @media (min-width: 1200px) {
+    width: 1164px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 984px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 744px;
+  }
 
-	@media (min-width: 576px) and (max-width: 767px) {
-		width: 564px;
-	}
+  @media (min-width: 576px) and (max-width: 767px) {
+    width: 564px;
+  }
 
-	@media (max-width: 575px) {
-		width: 100%;
-	}
+  @media (max-width: 575px) {
+    width: 100%;
+  }
 }
