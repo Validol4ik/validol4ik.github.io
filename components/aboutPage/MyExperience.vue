@@ -7,7 +7,7 @@
           <h2 class="exp-item__title">
             {{item.title}}
             <br />
-            <span class="exp-item__time">{{item.time}}</span>
+            <span v-if="item.time" class="exp-item__time">{{item.time}}</span>
           </h2>
           <p class="exp-item__desc">{{ item.desc }}</p>
         </li>

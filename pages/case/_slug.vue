@@ -2,7 +2,7 @@
   <main id="case-views" class="main case-page">
     <case-header />
     <main-info-section />
-    <solved-tasks />
+		<my-experience title="Other solved tasks" :list="caseBySlug($route.params.slug).worksFields" />
     <related-cases :project-slug="$route.params.slug" />
   </main>
 </template>
@@ -11,16 +11,16 @@
 import { mapGetters, mapActions } from 'vuex'
 import CaseHeader from '@/components/caseSingle/CaseHeader'
 import MainInfoSection from '@/components/caseSingle/MainInfoSection.vue'
-import SolvedTasks from '@/components/caseSingle/SolvedTasks.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases'
+import MyExperience from '@/components/aboutPage/MyExperience.vue'
 
 export default {
   name: 'Case',
   components: {
     CaseHeader,
     MainInfoSection,
-    SolvedTasks,
-    RelatedCases
+    RelatedCases,
+		MyExperience
   },
   provide() {
     return {
