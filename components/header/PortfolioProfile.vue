@@ -1,18 +1,24 @@
 <template>
   <nuxt-link class="profile" to="/">
     <vs-avatar size="65">
-      <img src="@/assets/img/avatar.webp" alt />
+      <img src="@/assets/img/avatar.webp" alt="Avatar" />
     </vs-avatar>
     <div class="profile-data">
-      <h5 class="profile__name">Polishchuk Valentyn</h5>
-      <span class="profile__post">Full stack Web Developer</span>
+      <h5 class="profile__name">{{author.firstName}} {{author.lastName}}</h5>
+      <span class="profile__post">{{author.post}}</span>
     </div>
   </nuxt-link>
 </template>
 
 <script>
 export default {
-  name: 'PortfolioProfile'
+  name: 'PortfolioProfile',
+	props: {
+		author: {
+			type: Object,
+			default: () => {},
+		}
+	}
 }
 </script>
 

@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="section-title">My skills</h1>
       <ul class="skills">
-        <li v-for="skill in skills" :key="skill.id" class="skill">
+        <li v-for="skill in list" :key="skill.id" class="skill">
           <h6 class="skill__title">{{skill.title}}</h6>
           <div class="skill__value">
             <p class="percents">{{skill.value}}%</p>
@@ -21,48 +21,12 @@
 <script>
 export default {
   name: 'SkillsSection',
-  data() {
-    return {
-      skills: [
-        {
-          id: 0,
-          title: 'JavaScript',
-          value: '85',
-          desc: 'I had many experiance with js. Now it is my favorite language'
-        },
-        {
-          id: 1,
-          title: 'Vue 2/3',
-          value: '80',
-          desc: 'I have 3 months of experiance developing web apps with vue'
-        },
-        {
-          id: 2,
-          title: 'Nuxt',
-          value: '70',
-          desc: 'I use the framework as default. I realy used to use it'
-        },
-        {
-          id: 3,
-          title: 'WordPress',
-          value: '80',
-          desc: "I don't like to work with WordPress, but it is good solution for small projects"
-        },
-        {
-          id: 4,
-          title: 'Web design',
-          value: '50',
-          desc: 'I love creative and I get experience every day'
-        },
-        {
-          id: 5,
-          title: 'English',
-          value: '45',
-          desc: 'Now my level is B1. I study hard to improve the level'
-        }
-      ]
-    }
-  }
+  props: {
+		list: {
+			type: Array,
+			default: () => [],
+		}
+	}
 }
 </script>
 

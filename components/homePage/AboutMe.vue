@@ -4,11 +4,7 @@
       <div class="position-wrapper">
         <div class="developer">
           <h1 class="developer__name">Who am I</h1>
-          <p class="developer__desc">
-            Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut
-            sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at
-            finibus elit.
-          </p>
+          <p class="developer__desc">{{author.excerpt}}</p>
           <ul class="services">
             <li v-for="service in tags" :key="service.id" class="service">{{ service.name }}</li>
           </ul>
@@ -33,16 +29,23 @@ export default {
 	data() {
 		return {
 			tags: [],
+			author: {},
 		}
 	},
 	mounted() {
 		this.loadTags()
+		this.loadData()
 	},
   methods: {
 		async loadTags() {
 			const response = await fetch('/db/tags.json')
 
 			this.tags = await response.json()
+		},
+		async loadData() {
+			const response = await fetch('/db/author.json')
+
+			this.author = await response.json()
 		},
     down() {
       const cases = document.getElementById('cases-hook')

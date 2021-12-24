@@ -1,0 +1,100 @@
+{
+	"firstName": "Valentyn",
+	"lastName": "Polishchyk",
+	"post": "Full stack Web Developer",
+	"avatar": "@/assets/img/avatar.webp",
+	"masc": "@/assets/img/mask.png",
+	"image": "@/assets/img/about.webp",
+	"excerpt": "Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at finibus elit.",
+	"about": "Proin imperdiet lacus quis odio aliquet, commodo scelerisque libero molestie. Duis fermentum nisi ut semper accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id volutpat enim, quis malesuada metus. Ut lobortis urna maximus.",
+	"works": [
+		{
+			"id": 0,
+			"title": "InternetDevels",
+			"time": "2020 - now",
+			"desc": "Developed frontend and backend for web applications. Sometimes I developed sites on WordPres",
+			"active": "true"
+		}
+	],
+	"education": [
+		{
+			"id": 0,
+			"title": "TVC of LNTU",
+			"time": "2018 - 2021",
+			"desc": "Computer injenering"
+		},
+		{
+			"id": 1,
+			"title": "Oxit School",
+			"time": "2020 (5 month)",
+			"desc": "Wordpress developing"
+		},
+		{
+			"id": 2,
+			"title": "Lutsk NTU",
+			"time": "2021 - now",
+			"desc": "Ciber security",
+			"active": true
+		}
+	],
+	"skills": [
+		{
+			"id": 0,
+			"title": "JavaScript",
+			"value": 70,
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+		},
+		{
+			"id": 1,
+			"title": "Vue / Vuex",
+			"value": 80,
+			"desc": "Donec hendrerit nulla consequat neque dignissim"
+		},
+		{
+			"id": 2,
+			"title": "Nuxt",
+			"value": 80,
+			"desc": "Nullam convallis finibus lorem, et congue sem ultricies eu"
+		},
+		{
+			"id": 3,
+			"title": "Quasar framework",
+			"value": 70,
+			"desc": "Quisque id condimentum tortor, in euismod ante"
+		},
+		{
+			"id": 4,
+			"title": "Strapi",
+			"value": 60,
+			"desc": "Aliquam in dolor at eros vehicula placerat"
+		},
+		{
+			"id": 5,
+			"title": "Web design",
+			"value": 60,
+			"desc": "Etiam maximus purus vulputate urna lobortis"
+		}
+	],
+	"social": [
+		{
+			"id": 0,
+			"icon": "bxl-telegram",
+			"url": "https://t.me/valiidol4ik"
+		},
+		{
+			"id": 1,
+			"icon": "bxl-instagram-alt",
+			"url": "https://www.instagram.com/valentynpolishchyk"
+		},
+		{
+			"id": 2,
+			"icon": "bxl-linkedin",
+			"url": "https://www.linkedin.com/in/valentyn-polishchyk-8a2435217/"
+		},
+		{
+			"id": 3,
+			"icon": "bxl-github",
+			"url": "https://github.com/validol4ik"
+		}
+	]
+}

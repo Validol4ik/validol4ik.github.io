@@ -6,13 +6,11 @@
         <img src="@/assets/img/about.webp" class="portret" alt="me" />
         <div class="bio">
           <h1 class="bio-full-name">
-            <span class="bio__title bio-name">Valentyn</span>
+            <span class="bio__title bio-name">{{author.firstName}}</span>
             <br />
-            <span class="bio__title bio-last-name">Polishchyk</span>
+            <span class="bio__title bio-last-name">{{author.lastName}}</span>
           </h1>
-          <p
-            class="bio__desc"
-          >Proin imperdiet lacus quis odio aliquet, commodo scelerisque libero molestie. Duis fermentum nisi ut semper accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id volutpat enim, quis malesuada metus. Ut lobortis urna maximus.</p>
+          <p class="bio__desc">{{author.about}}</p>
         </div>
       </div>
     </div>
@@ -21,7 +19,13 @@
 
 <script>
 export default {
-  name: 'AboutSection'
+  name: 'AboutSection',
+	props: {
+		author: {
+			type: Object,
+			default: () => {},
+		}
+	}
 }
 </script>
 

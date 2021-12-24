@@ -2,8 +2,8 @@
   <footer class="footer">
     <div class="container">
       <div class="content-wrapper">
-        <icons-list />
-        <h3 class="footer__title">Valentyn Polishchyk</h3>
+        <icons-list :list="author.social" />
+        <h3 class="footer__title">{{author.firstName}} {{author.lastName}}</h3>
       </div>
     </div>
   </footer>
@@ -16,7 +16,13 @@ export default {
   name: 'PortfolioFooter',
   components: {
     IconsList
-  }
+  },
+	props: {
+		author: {
+			type: Object,
+			default: () => {}
+		}
+	}
 }
 </script>
 

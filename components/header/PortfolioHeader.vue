@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <portfolio-profile />
+      <portfolio-profile :author="author" />
       <site-settings />
     </div>
   </header>
@@ -16,7 +16,13 @@ export default {
   components: {
     PortfolioProfile,
     SiteSettings
-  }
+  },
+	props: {
+		author: {
+			type: Object,
+			default: () => {},
+		}
+	}
 }
 </script>
 

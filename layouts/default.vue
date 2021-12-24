@@ -1,8 +1,8 @@
 <template>
   <div>
-    <portfolio-header />
+    <portfolio-header :author="author" />
     <Nuxt />
-    <portfolio-footer />
+    <portfolio-footer :author="author" />
   </div>
 </template>
 
@@ -14,6 +14,21 @@ export default {
   components: {
     PortfolioHeader,
     PortfolioFooter
-  }
+  },
+	data() {
+		return {
+			author: {},
+		}
+	},
+	mounted() {
+		this.loadData()
+	},
+	methods: {
+		async loadData() {
+			const response = await fetch('/db/author.json')
+
+			this.author = await response.json()
+		}
+	},
 }
 </script>

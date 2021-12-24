@@ -36,7 +36,7 @@ export default {
       this.filterCases(tags)
     }
   },
-	beforeMount() {
+	mounted() {
 		this.loadCases()
 		this.loadTags()
   },
