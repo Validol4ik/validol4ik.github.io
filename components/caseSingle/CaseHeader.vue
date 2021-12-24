@@ -36,7 +36,12 @@
 <script>
 export default {
   name: 'CaseHeader',
-  inject: ['project'],
+	props: {
+		project: {
+			type: Object,
+			default: () => {},
+		}
+	},
   computed: {
     imgStyle() {
       if (!this.project.preview) {

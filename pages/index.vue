@@ -1,7 +1,7 @@
 <template>
   <main class="main home">
     <about-me />
-    <cases-section />
+    <cases-section :cases="cases" />
   </main>
 </template>
 
@@ -15,13 +15,22 @@ export default {
     AboutMe,
     CasesSection
   },
+	data() {
+		return {
+			cases: [],
+		}
+	},
   mounted() {
+		this.loadCases()
     this.fillTagsStore()
-    this.fillCasesStore()
   },
   methods: {
     ...mapActions('cases-tags', ['fillTagsStore']),
-    ...mapActions('cases', ['fillCasesStore'])
+		async loadCases() {
+			const response = await fetch('/db/cases.json')
+
+			this.cases = await response.json()
+		}
   }
 }
 </script>

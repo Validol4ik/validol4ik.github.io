@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import CasesList from '@/components/global/CasesList.vue'
+
 export default {
   name: 'RelatedCases',
   components: {
@@ -25,23 +25,29 @@ export default {
       default: () => null
     }
   },
+	data() {
+		return {
+			cases: [],
+		}
+	},
   computed: {
-    ...mapGetters('cases', ['cases']),
     relatedCases() {
-      const randCases = new Set()
-      const filteredCases = this.projectSlug
-        ? this.cases.filter((item) => item.slug !== this.projectSlug)
-        : this.cases
+			let shuffledCases = this.cases
+      shuffledCases = shuffledCases.sort(() => 0.5 - Math.random())
 
-      while (randCases.size < 3) {
-        const randNum = Math.floor(Math.random() * filteredCases.length)
-
-        randCases.add(filteredCases[randNum])
-      }
-
-      return randCases
+			return shuffledCases.slice(0, 3);
     }
-  }
+  },
+	mounted() {
+		this.loadCases()
+	},
+	methods: {
+		async loadCases() {
+			const response = await fetch('/db/cases.json')
+
+			this.cases = await response.json()
+		}
+	}
 }
 </script>
 

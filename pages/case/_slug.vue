@@ -1,14 +1,13 @@
 <template>
   <main id="case-views" class="main case-page">
-    <case-header />
-    <main-info-section />
-		<my-experience title="Other solved tasks" :list="caseBySlug($route.params.slug).worksFields" />
+    <case-header :project="project" />
+    <main-info-section :project="project" />
+		<my-experience title="Other solved tasks" :list="project.worksFields" />
     <related-cases :project-slug="$route.params.slug" />
   </main>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
 import CaseHeader from '@/components/caseSingle/CaseHeader'
 import MainInfoSection from '@/components/caseSingle/MainInfoSection.vue'
 import RelatedCases from '@/components/caseSingle/RelatedCases'
@@ -22,20 +21,21 @@ export default {
     RelatedCases,
 		MyExperience
   },
-  provide() {
-    return {
-      project: this.caseBySlug(this.$route.params.slug)
-    }
-  },
-  computed: {
-    ...mapGetters('cases', ['caseBySlug'])
-  },
+	data() {
+		return {
+			project: {},
+		}
+	},
   mounted() {
-    this.fillCasesStore()
+		this.caseBySlug()
   },
-  methods: {
-    ...mapActions('cases', ['fillCasesStore'])
-  }
+	methods: {
+		async caseBySlug() {
+			const response = await fetch(`/db/cases/${this.$route.params.slug}.json`)
+
+			this.project = await response.json()
+		}
+	}
 }
 </script>
 

@@ -26,7 +26,7 @@
           </li>
         </ul>
       <div class="case-info-wrapper">
-        <img
+        <img v-if="project.image"
           :src="require(`@/assets/img/cases/${project.image}`)"
           class="case-single__preview"
           alt="Case image"
@@ -64,7 +64,12 @@
 <script>
 export default {
   name: 'MainInfoSection',
-  inject: ['project']
+  props: {
+		project: {
+			type: Object,
+			default: () => {},
+		}
+	}
 }
 </script>
 

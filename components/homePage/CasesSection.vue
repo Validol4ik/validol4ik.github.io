@@ -9,18 +9,20 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import FilterTags from './FilterTags.vue'
 import CasesList from '@/components/global/CasesList'
 
 export default {
   name: 'CasesSection',
-  components: {
+	components: {
     CasesList,
     FilterTags
   },
-  computed: {
-    ...mapGetters('cases', ['cases'])
-  }
+	props: {
+		cases: {
+			type: Array,
+			default: () => [],
+		}
+	},
 }
 </script>
