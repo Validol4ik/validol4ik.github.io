@@ -5,9 +5,9 @@
 	"description": "Vivamus at tincidunt mi. Aliquam at tellus tempus magna mattis lacinia tincidunt vel felis. Aliquam venenatis, nisl id ultrices consequat, elit felis hendrerit neque, ac facilisis velit mi at nisi. Etiam pharetra enim sed pellentesque lacinia. Fusce eu pretium ligula.",
 	"time": "4 days",
 	"price": "80$",
-	"preview": "lucid/lucid.webp",
-	"image": "lucid/lucid-single.webp",
-	"type": "Layout",
+	"preview": "spend/spend.webp",
+	"image": "spend/spend-single.webp",
+	"type": "Mobile App",
 	"contributors": [
 		{
 			"id": 0,

@@ -29,7 +29,7 @@
 		"siteUrl": "http://busisckhem.biz",
 		"time": "2 month",
 		"price": "350$",
-		"preview": "ziko/ziko.webp",
+		"preview": "business/business.webp",
 		"tags": [3]
 	},
   {
@@ -50,7 +50,7 @@
 		"excerpt": "Phasellus non tincidunt nisi. Aliquam eu pharetra mi, eget viverra nibh.",
 		"time": "4 days",
 		"price": "80$",
-		"preview": "lucid/lucid.webp",
+		"preview": "spend/spend.webp",
 		"tags": [0, 2]
 	}
 ]
