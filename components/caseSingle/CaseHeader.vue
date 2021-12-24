@@ -80,6 +80,11 @@ export default {
     letter-spacing: 3px;
     color: #fff;
   }
+	@media (max-width: 575px) {
+		&__title {
+			font-size: 40px;
+		}
+	}
 }
 .case-stats {
   margin-top: 150px;
@@ -102,5 +107,35 @@ export default {
       padding: 4px 2px;
     }
   }
+
+	@media (max-width: 991px) {
+		margin-top: 120px;
+		padding: 24px 0;
+		.stat {
+			&__title {
+				margin-bottom: 6px;
+				font-size: 14px;
+			}
+			&__value {
+				font-size: 16px;
+			}
+			&__btn {
+				padding: 0;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		.stat {
+			&__value {
+				letter-spacing: 0.3px;
+				font-size: 20px;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		display: none;
+	}
 }
 </style>

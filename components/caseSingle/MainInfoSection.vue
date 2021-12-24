@@ -1,6 +1,30 @@
 <template>
   <section class="case-single">
     <div class="container">
+			<ul class="stats">
+          <li class="stat">
+            <p class="stat__title">Type of project</p>
+            <h3 class="stat__value">{{ project.type }}</h3>
+          </li>
+          <li class="stat">
+            <p class="stat__title">Deadline</p>
+            <h3 class="stat__value">{{ project.time }}</h3>
+          </li>
+          <li class="stat">
+            <p class="stat__title">Budget</p>
+            <h3 class="stat__value">{{ project.price }}</h3>
+          </li>
+          <li v-if="project.siteUrl" class="stat">
+            <vs-button
+              class="stat__btn"
+              :href="project.siteUrl"
+              size="large"
+              blank
+              danger
+              >Visit the site</vs-button
+            >
+          </li>
+        </ul>
       <div class="case-info-wrapper">
         <img
           :src="require(`@/assets/img/cases/${project.image}`)"
@@ -68,7 +92,81 @@ export default {
     margin-bottom: 5px;
     letter-spacing: 0.5px;
   }
+
+	@media (max-width: 1199px) {
+		&__preview {
+			width: 40%;
+			height: 570px;
+		}
+		.pretitle {
+			margin-bottom: 36px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		&__preview {
+			display: none;
+		}
+	}
+
+	@media (max-width: 767px) {
+		text-align: center;
+	}
+
+	@media (max-width: 575px) {
+		.pretitle, &__title {
+			display: none;
+		}
+	}
 }
+
+.stats {
+	display: none;
+	@media (max-width: 575px) {
+		margin-bottom: 40px;
+		display: grid;
+		grid-template: 1fr / 1fr 1fr;
+		gap: 30px 8%;
+		.stat {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-shadow: 0 8px 20px rgba($color: #000, $alpha: 0.07);
+			border-radius: 12px;
+			&__title {
+				margin-bottom: 4px;
+				font-size: 14px;
+			}
+			&__value {
+				font-family: 'Montserrat', sans-serif;
+				letter-spacing: 0.2px;
+				font-size: 18px;
+			}
+		}
+	}
+	@media (max-width: 460px) {
+		gap: 20px 5%;
+		.stat {
+			padding: 16px 0;
+			&__value {
+				font-size: 16px;
+			}
+		}
+	}
+	@media (max-width: 375px) {
+		grid-template: 1fr / 1fr;
+		margin: 0 16px 40px;
+		.stat {
+			padding: 20px 0;
+			&__value {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
 .case-info-wrapper {
   display: flex;
   justify-content: space-between;
@@ -80,6 +178,18 @@ export default {
   .vs-avatar__group {
     justify-content: flex-start;
   }
+
+	@media (max-width: 991px) {
+		.case-target {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.vs-avatar__group {
+			justify-content: center;
+		}
+	}
 }
 
 .tasks {
@@ -97,5 +207,25 @@ export default {
       margin: 10px 0 5px;
     }
   }
+
+	@media (max-width: 1199px) {
+		.task {
+			width: 48%;
+		}
+	}
+
+	@media (max-width: 575px) {
+		flex-wrap: wrap;
+		.task {
+			width: 100%;
+			padding: 0 10%;
+		}
+	}
+
+	@media (max-width: 390px) {
+		.task {
+			padding: 0;
+		}
+	}
 }
 </style>

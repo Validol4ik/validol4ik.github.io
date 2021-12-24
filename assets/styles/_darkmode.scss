@@ -1,83 +1,84 @@
 .darkmode {
-	header {
-		background: rgba($color: #1D1427, $alpha: 0.7)
-	}
-	body {
-		background: #1D1427;
-		color: #fff;
-	}
-	.vs-avatar {
-		background: #1D1427;
-	}
-	.profile {
-		&__name {
-			color: #fff;
-		}
-		&__post {
-			color: #e34a57;
-		}
-		.vs-avatar {
-			background: transparent;
-		}
-	}
-	.vs-switch {
-		background: transparent;
-	}
-	.vs-select {
-		&__label {
-			color: #2c3e50;
-		}
-	}
-	.case {
-		.vs-card {
-			// background: #1a1224;
-			// box-shadow: none;
-			background: #1D1427;
-			box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
-			&__title, p {
-				color: #fff;
-			}
-		}
-	}
-	.case-stats {
-		background: #1D1427;
-		.stat__title {
-			color: #e34a57;
-		}
-	}
-	.pretitle {
-		color: rgb(49, 34, 71);
-	}
-	.exp-list .exp-item {
-		background: #1a1224;
-		box-shadow: none;
-	}
-	.skill {
-		box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
-	}
-	.other-tasks {
-		.task {
-			background: #1a1224;
-			box-shadow: none;
-			&:hover {
-				box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
-			}
-		}
-	}
-	footer {
-		background: #1a1224;
-		box-shadow: none;
-		.soc-links {
-			.vs-button {
-				i {
-					color: #1a1224;
-				}
-				&:hover {
-					i {
-						color: #fff;
-					}
-				}
-			}
-		}
-	}
+  header {
+    background: rgba($color: #1d1427, $alpha: 0.7);
+  }
+  body {
+    background: #1d1427;
+    color: #fff;
+  }
+  .vs-avatar {
+    background: #1d1427;
+  }
+  .profile {
+    &__name {
+      color: #fff;
+    }
+    &__post {
+      color: #e34a57;
+    }
+    .vs-avatar {
+      background: transparent;
+    }
+  }
+  .vs-switch {
+    background: transparent;
+  }
+  .vs-select {
+    &__label {
+      color: #2c3e50;
+    }
+  }
+  .case {
+    .vs-card {
+      // background: #1a1224;
+      // box-shadow: none;
+      background: #1d1427;
+      box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
+      &__title,
+      p {
+        color: #fff;
+      }
+    }
+  }
+  .case-stats,
+  .stats {
+    background: #1d1427;
+    .stat__title {
+      color: #e34a57;
+    }
+  }
+  .stats {
+    .stat {
+      box-shadow: 0 4px 1px rgba($color: #1a1224, $alpha: 0.8);
+    }
+  }
+  .pretitle {
+    color: rgb(49, 34, 71);
+  }
+  .exp-list .exp-item {
+    background: #1a1224;
+    box-shadow: none;
+    &__title {
+      color: #e34a57;
+    }
+  }
+  .skill {
+    box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
+  }
+  footer {
+    background: #1a1224;
+    box-shadow: none;
+    .soc-links {
+      .vs-button {
+        i {
+          color: #1a1224;
+        }
+        &:hover {
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
