@@ -10,7 +10,7 @@
             finibus elit.
           </p>
           <ul class="services">
-            <li v-for="service in casesTags" :key="service.id" class="service">{{ service.name }}</li>
+            <li v-for="service in tags" :key="service.id" class="service">{{ service.name }}</li>
           </ul>
           <div class="nav-buttons">
             <vs-button class="nav-btn" danger size="large" @click="down()">
@@ -27,14 +27,23 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'AboutMe',
-  computed: {
-    ...mapGetters('cases-tags', ['casesTags'])
-  },
+	data() {
+		return {
+			tags: [],
+		}
+	},
+	mounted() {
+		this.loadTags()
+	},
   methods: {
+		async loadTags() {
+			const response = await fetch('/db/tags.json')
+
+			this.tags = await response.json()
+		},
     down() {
       const cases = document.getElementById('cases-hook')
       cases.scrollIntoView({ block: 'start', behavior: 'smooth' })
