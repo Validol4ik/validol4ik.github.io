@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Приложения",
+    "casesIds": [0, 1, 2]
+  },
+	{
+    "id": 1,
+    "name": "Wordpress",
+    "casesIds": []
+  },
+	{
+    "id": 2,
+    "name": "Лендинг",
+    "casesIds": [3]
+  },
+	{
+    "id": 3,
+    "name": "Магазины",
+    "casesIds": [0]
+  },
+	{
+    "id": 4,
+    "name": "Вёрстка",
+    "casesIds": [3]
+  },
+	{
+    "id": 5,
+    "name": "Дизайн",
+    "casesIds": []
+  }
+]

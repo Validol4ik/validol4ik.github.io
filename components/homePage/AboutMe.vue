@@ -32,20 +32,22 @@ export default {
 			author: {},
 		}
 	},
-	mounted() {
-		this.loadTags()
-		this.loadData()
+	watch: {
+		'$route.query.lang': {
+			handler() {
+				this.loadData('tags')
+				this.loadData('author')
+			},
+			deep: true,
+			immediate: true
+		}
 	},
   methods: {
-		async loadTags() {
-			const response = await fetch('/db/tags.json')
+		async loadData(type) {
+			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
 
-			this.tags = await response.json()
-		},
-		async loadData() {
-			const response = await fetch('/db/author.json')
-
-			this.author = await response.json()
+			const response = await fetch(`/db/${type}${addQuery}.json`)
+			this[type] = await response.json()
 		},
     down() {
       const cases = document.getElementById('cases-hook')

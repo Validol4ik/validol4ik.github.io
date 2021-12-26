@@ -7,8 +7,8 @@
       </template>
     </vs-switch>
     <vs-select v-model="lang" danger>
-      <vs-option label="EN" value="EN">EN</vs-option>
-      <vs-option label="RU" value="RU">RU</vs-option>
+      <vs-option label="EN" value="en">EN</vs-option>
+      <vs-option label="RU" value="ru">RU</vs-option>
     </vs-select>
   </div>
 </template>
@@ -19,16 +19,28 @@ export default {
   data() {
     return {
       darkMode: false,
-      lang: 'EN'
+      lang: 'en'
     }
   },
   watch: {
-    darkMode(dark) {
+    darkMode() {
       this.htmlTag.classList.toggle('darkmode')
-    }
+    },
+		lang(newValue) {
+			this.$router.push(
+				{ 
+					query: {
+						lang: newValue
+					} 
+				}
+			)
+		},
   },
   beforeMount() {
     this.htmlTag = document.querySelector('html')
+
+		if (this.$route.query.lang)
+			this.lang = this.$route.query.lang
   }
 }
 </script>
