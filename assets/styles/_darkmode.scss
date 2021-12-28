@@ -61,6 +61,11 @@
     &__title {
       color: #e34a57;
     }
+    &.active {
+      .exp-item__title {
+        color: #fff;
+      }
+    }
   }
   .skill {
     box-shadow: 0 6px 4px rgba($color: #1a1224, $alpha: 0.6);
