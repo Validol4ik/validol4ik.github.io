@@ -20,7 +20,7 @@ export default {
 		}
 	},
 	watch: {
-		'$route.query.lang': {
+		'$i18n.locale': {
 			handler() {
 				this.loadTags()
 			},
@@ -30,9 +30,8 @@ export default {
 	},
 	methods: {
 		async loadTags() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
+			const response = await fetch(`/db/${this.$i18n.locale}/tags.json`)
 
-			const response = await fetch(`/db/tags${addQuery}.json`)
 			this.tags = await response.json()
 		},
 	}

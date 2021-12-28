@@ -7,8 +7,13 @@
       </template>
     </vs-switch>
     <vs-select v-model="lang" danger>
-      <vs-option label="EN" value="en">EN</vs-option>
-      <vs-option label="RU" value="ru">RU</vs-option>
+      <vs-option 
+				v-for="locale in $i18n.locales" 
+				:key="locale.code" 
+				:label="locale.name" 
+				:value="locale.code"
+				>{{ locale.name }}
+			</vs-option>
     </vs-select>
   </div>
 </template>
@@ -19,7 +24,7 @@ export default {
   data() {
     return {
       darkMode: false,
-      lang: 'en'
+      lang: '',
     }
   },
   watch: {
@@ -27,20 +32,12 @@ export default {
       this.htmlTag.classList.toggle('darkmode')
     },
 		lang(newValue) {
-			this.$router.push(
-				{ 
-					query: {
-						lang: newValue
-					} 
-				}
-			)
+			this.$i18n.setLocale(newValue)
 		},
   },
   beforeMount() {
+		this.lang = this.$i18n.locale
     this.htmlTag = document.querySelector('html')
-
-		if (this.$route.query.lang)
-			this.lang = this.$route.query.lang
   }
 }
 </script>

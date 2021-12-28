@@ -1,8 +1,14 @@
 <template>
   <section id="cases-hook" class="cases-section">
     <div class="container">
-      <h3 class="section-title">My recent projects</h3>
-      <vs-select v-model="selectedTags" danger class="filter-tags" filter multiple placeholder="Categories">
+      <h3 class="section-title">{{ $t('recentTitle') }}</h3>
+      <vs-select 
+				v-model="selectedTags"
+				filter
+				color="danger"
+				multiple
+				class="filter-tags" 
+				:placeholder="$t('categories')">
 				<vs-option
 					v-for="tag in tags"
 					:key="tag.id"
@@ -50,9 +56,9 @@ export default {
   },
 	methods: {
 		async loadCases() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
 
-			const response = await fetch(`/db/cases${addQuery}.json`)
+			const response = await fetch(`/db/${this.$i18n.locale}/cases.json`)
+
 			this.cases = await response.json()
 			this.filteredCases = this.cases
 		},
@@ -79,5 +85,8 @@ export default {
   @media (max-width: 767px) {
     margin: 0 auto;
   }
+}
+.cases-section {
+	min-height: 400px;
 }
 </style>

@@ -1,11 +1,7 @@
 {
-	"firstName": "Valentyn",
-	"lastName": "Polishchyk",
-	"post": "Full stack Web Developer",
 	"avatar": "@/assets/img/avatar.webp",
 	"masc": "@/assets/img/mask.png",
 	"image": "@/assets/img/about.webp",
-	"excerpt": "Vivamus in lectus a tellus condimentum sagittis. Aenean placerat ut sapien fermentum imperdiet. Vestibulum vitae tristique nulla, at finibus elit.",
 	"about": "Proin imperdiet lacus quis odio aliquet, commodo scelerisque libero molestie. Duis fermentum nisi ut semper accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id volutpat enim, quis malesuada metus. Ut lobortis urna maximus.",
 	"works": [
 		{

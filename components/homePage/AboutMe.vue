@@ -3,17 +3,24 @@
     <div class="container">
       <div class="position-wrapper">
         <div class="developer">
-          <h1 class="developer__name">Who am I</h1>
-          <p class="developer__desc">{{author.excerpt}}</p>
+          <h1 class="developer__name">{{ $t('whoAmI') }}</h1>
+          <p class="developer__desc">{{ $t('excerpt') }}</p>
           <ul class="services">
             <li v-for="service in tags" :key="service.id" class="service">{{ service.name }}</li>
           </ul>
           <div class="nav-buttons">
             <vs-button class="nav-btn" danger size="large" @click="down()">
-              Projects
+              {{ $t('projectBtn') }}
               <i class="bx bxs-down-arrow"></i>
             </vs-button>
-            <vs-button to="/about" class="nav-btn" danger size="large" border>About me</vs-button>
+            <vs-button 
+							:to="localePath('/about')" 
+							class="nav-btn" 
+							danger 
+							size="large" 
+							border
+							>{{ $t('aboutBtn') }}
+						</vs-button>
           </div>
         </div>
         <img src="@/assets/img/mask.png" class="developer__preview" alt="My portret" />
@@ -32,27 +39,7 @@ export default {
 			default: () => []
 		}
 	},
-	data() {
-		return {
-			author: {},
-		}
-	},
-	watch: {
-		'$route.query.lang': {
-			handler() {
-				this.loadAuthor()
-			},
-			deep: true,
-			immediate: true
-		}
-	},
   methods: {
-		async loadAuthor() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
-
-			const response = await fetch(`/db/author${addQuery}.json`)
-			this.author = await response.json()
-		},
     down() {
       const cases = document.getElementById('cases-hook')
       cases.scrollIntoView({ block: 'start', behavior: 'smooth' })

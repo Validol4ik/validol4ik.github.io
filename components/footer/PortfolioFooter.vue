@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content-wrapper">
         <icons-list :list="author.social" />
-        <h3 class="footer__title">{{author.firstName}} {{author.lastName}}</h3>
+        <h3 class="footer__title">{{ $t('firstName') }} {{ $t('lastName') }}</h3>
       </div>
     </div>
   </footer>

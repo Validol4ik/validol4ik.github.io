@@ -24,7 +24,7 @@
           <vs-button :href="project.siteUrl" blank class="visit" icon danger>
             <i class="bx bx-link-external"></i>
           </vs-button>
-          <template #tooltip>Visit site</template>
+          <template #tooltip>{{ $t('siteUrl') }}</template>
         </vs-tooltip>
       </template>
     </vs-card>
