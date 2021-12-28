@@ -5,14 +5,14 @@
 	"avatar": "@/assets/img/avatar.webp",
 	"masc": "@/assets/img/mask.png",
 	"image": "@/assets/img/about.webp",
-	"excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt massa ut ante aliquet, id gravida elit rutrum. Aenean scelerisque luctus lacinia.",
-	"about": "Aenean convallis metus velit, id elementum mi condimentum id. Donec posuere justo justo, nec vehicula sem volutpat a. Quisque eleifend lorem odio, a auctor lectus ultrices vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc vel neque ac ipsum dapibus mattis sit amet ac turpis.",
+	"excerpt": "Привет! Я программист, блогер, инвестор, любитель творчества Айн Ренд и простой, любящий свое дело человек. И я создаю проекты таких типов:",
+	"about": "Я занимаюсь программированием два года. Год работал разработчиком в компании, в остльное время создавал интересные проекты, получал образование. Ещё я веду блог в инстаграме, где рассказываю о свое деятельности и сфере. Люблю книги, фильмы, творчество",
 	"works": [
 		{
 			"id": 0,
 			"title": "InternetDevels",
 			"time": "2020 - сейчас",
-			"desc": "Разрабатывал frontend и backend для веб приложений. Иногда разрабатывал сайты на WordPres",
+			"desc": "Разрабатывал frontend и backend для веб приложений. Иногда разрабатывал сайты на Вордпресс",
 			"active": "true"
 		}
 	],
@@ -27,7 +27,7 @@
 			"id": 1,
 			"title": "Школа Oxit",
 			"time": "2020 (5 month)",
-			"desc": "Wordpress разработка"
+			"desc": "Вордпресс разработка"
 		},
 		{
 			"id": 2,
@@ -54,13 +54,13 @@
 			"id": 2,
 			"title": "Nuxt",
 			"value": 80,
-			"desc": "Чаще всего для разработки испльзовал именно Накст, хорошо разбираюсь в нём"
+			"desc": "Чаще всего для разработки использовал именно Накст"
 		},
 		{
 			"id": 3,
 			"title": "Quasar фреймворк",
 			"value": 70,
-			"desc": "Мой любимый фреймворк для фронтенда и мобильных приложений, К сожалению узнал о нём не так давно."
+			"desc": "Любимый фреймворк, обожаю делать мобильные приложения на нём"
 		},
 		{
 			"id": 4,

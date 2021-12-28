@@ -32,18 +32,31 @@ export default {
 	},
   computed: {
     relatedCases() {
-			let shuffledCases = this.cases
+			let shuffledCases = []
+
+			if (!this.projectSlug) 
+				shuffledCases = this.cases
+			else
+				shuffledCases = this.cases.filter((item) => item.slug !==  this.projectSlug)
+			 
       shuffledCases = shuffledCases.sort(() => 0.5 - Math.random())
 
 			return shuffledCases.slice(0, 3);
     }
   },
-	mounted() {
-		this.loadCases()
+	watch: {
+		'$route.query.lang': {
+			handler() {
+				this.loadCases()
+			},
+			deep: true,
+			immediate: true
+		}
 	},
 	methods: {
 		async loadCases() {
-			const response = await fetch('/db/cases.json')
+			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
+			const response = await fetch(`/db/cases${addQuery}.json`)
 
 			this.cases = await response.json()
 		}

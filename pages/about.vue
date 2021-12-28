@@ -29,12 +29,19 @@ export default {
 			author: {},
     }
   },
-	mounted() {
-		this.loadData()
+	watch: {
+		'$route.query.lang': {
+			handler() {
+				this.loadData()
+			},
+			deep: true,
+			immediate: true
+		}
 	},
 	methods: {
 		async loadData() {
-			const response = await fetch('/db/author.json')
+			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
+			const response = await fetch(`/db/author${addQuery}.json`)
 
 			const author = await response.json()
 			this.works = author.works

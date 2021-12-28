@@ -23,34 +23,38 @@ export default {
 	components: {
     CasesList,
   },
+	props: {
+		tags: {
+			type: Array,
+			default: () => []
+		}
+	},
 	data() {
 		return {
 			cases: [],
 			filteredCases: [],
-			tags: [],
 			selectedTags: [],
 		}
 	},
 	watch: {
     selectedTags(tags) {
       this.filterCases(tags)
-    }
-  },
-	mounted() {
-		this.loadCases()
-		this.loadTags()
+    },
+		'$route.query.lang': {
+			handler() {
+				this.loadCases()
+			},
+			deep: true,
+			immediate: true
+		}
   },
 	methods: {
 		async loadCases() {
-			const response = await fetch('/db/cases.json')
+			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
 
+			const response = await fetch(`/db/cases${addQuery}.json`)
 			this.cases = await response.json()
 			this.filteredCases = this.cases
-		},
-		async loadTags() {
-			const response = await fetch('/db/tags.json')
-
-			this.tags = await response.json()
 		},
 		filterCases(tags) {
 			if (tags.length < 1 || tags.length === this.tags.length)

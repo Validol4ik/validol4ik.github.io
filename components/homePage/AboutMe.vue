@@ -26,28 +26,32 @@
 
 export default {
   name: 'AboutMe',
+	props: {
+		tags: {
+			type: Array,
+			default: () => []
+		}
+	},
 	data() {
 		return {
-			tags: [],
 			author: {},
 		}
 	},
 	watch: {
 		'$route.query.lang': {
 			handler() {
-				this.loadData('tags')
-				this.loadData('author')
+				this.loadAuthor()
 			},
 			deep: true,
 			immediate: true
 		}
 	},
   methods: {
-		async loadData(type) {
+		async loadAuthor() {
 			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
 
-			const response = await fetch(`/db/${type}${addQuery}.json`)
-			this[type] = await response.json()
+			const response = await fetch(`/db/author${addQuery}.json`)
+			this.author = await response.json()
 		},
     down() {
       const cases = document.getElementById('cases-hook')
