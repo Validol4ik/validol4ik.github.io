@@ -1,0 +1,38 @@
+{
+	"id": 2,
+	"slug": "Business Scheme",
+	"name": "business-scheme",
+	"description": "Proin viverra, velit accumsan rhoncus tincidunt, purus ligula feugiat risus, eget viverra justo lorem eleifend quam. Maecenas interdum quam mi. Donec sed diam volutpat, ornare orci non, cursus risus. Morbi vehicula neque congue sem vehicula posuere.",
+	"siteUrl": "http://busisckhem.biz",
+	"time": "2 month",
+	"price": "350$",
+	"preview": "business/business.webp",
+	"image": "business/business-single.webp",
+	"type": "Web app",
+	"contributors": [
+		{
+			"id": 0,
+			"avatar": "valik.webp",
+			"url": "https://github.com/validol4ik"
+		}
+	],
+	"purpose": "Integer at orci condimentum nisl ultricies facilisis. Phasellus id pharetra urna.",
+	"solution": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+	"worksFields": [
+		{
+			"id": 0,
+			"title": "Mauris vulputate",
+			"description": "Mauris pulvinar cursus eros, nec dictum nulla mattis eu. Pellentesque at volutpat sem, eu ullamcorper neque. Nunc nec risus tortor."
+		},
+		{
+			"id": 1,
+			"title": "Duis sed mi",
+			"description": "Duis sed mi eros. Suspendisse rhoncus augue velit, at finibus augue molestie dictum. Nullam nec iaculis libero. Nulla tempus."
+		},
+		{
+			"id": 2,
+			"title": "Suspendisse",
+			"description": "Suspendisse sed eros at ante mattis blandit id in metus. Pellentesque sed metus quis augue dignissim sodales. Proin et libero odio."
+		}
+	]
+}

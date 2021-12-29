@@ -5,15 +5,15 @@
         <h1 class="case-header__title">{{ project.name }}</h1>
         <ul class="case-stats">
           <li class="stat">
-            <p class="stat__title">Type of project</p>
+            <p class="stat__title">{{ $t('type') }}</p>
             <h3 class="stat__value">{{ project.type }}</h3>
           </li>
           <li class="stat">
-            <p class="stat__title">Deadline</p>
+            <p class="stat__title">{{ $t('deadline') }}</p>
             <h3 class="stat__value">{{ project.time }}</h3>
           </li>
           <li class="stat">
-            <p class="stat__title">Budget</p>
+            <p class="stat__title">{{ $t('budget') }}</p>
             <h3 class="stat__value">{{ project.price }}</h3>
           </li>
           <li v-if="project.siteUrl" class="stat">
@@ -23,7 +23,7 @@
               size="large"
               blank
               danger
-              >Visit the site</vs-button
+              >{{ $t('siteUrl') }}</vs-button
             >
           </li>
         </ul>

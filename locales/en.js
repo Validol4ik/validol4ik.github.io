@@ -15,4 +15,13 @@ export default {
 	eduTitle: 'Education',
 	skillsTitle: 'My skills',
 	someProjectsTitle: 'Some of my projects',
+	type: 'Type of project',
+	deadline: 'Deadline',
+	budget: 'Budget',
+	aboutCase: 'About the case',
+	contrib: 'Contributors',
+	goal: 'Main goal',
+	solution: 'Solution',
+	otherTasks: 'Other solved tasks',
+	otherCases: 'Other Cases'
 };

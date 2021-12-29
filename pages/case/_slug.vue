@@ -2,8 +2,8 @@
   <main id="case-views" class="main case-page">
     <case-header :project="project" />
     <main-info-section :project="project" />
-		<my-experience title="Other solved tasks" :list="project.worksFields" />
-    <related-cases :project-slug="$route.params.slug" />
+		<my-experience :title="$t('otherTasks')" :list="project.worksFields" />
+    <related-cases :title="$t('otherCases')" :project-slug="$route.params.slug" />
   </main>
 </template>
 
@@ -31,7 +31,7 @@ export default {
   },
 	methods: {
 		async caseBySlug() {
-			const response = await fetch(`/db/cases/${this.$route.params.slug}.json`)
+			const response = await fetch(`/db/${this.$i18n.locale}/cases/${this.$route.params.slug}.json`)
 
 			this.project = await response.json()
 		}

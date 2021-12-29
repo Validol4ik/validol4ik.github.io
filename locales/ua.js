@@ -15,4 +15,13 @@ export default {
 	eduTitle: 'Освіта',
 	skillsTitle: 'Мої вміння',
 	someProjectsTitle: 'Деякі з моїх проєктів',
+	type: 'Тип проєкту',
+	deadline: 'Дедлайн',
+	budget: 'Бюджет',
+	aboutCase: 'Про цей кейс',
+	contrib: 'Учасники',
+	goal: 'Головна ціль',
+	solution: 'Рішення',
+	otherTasks: 'Інші вирішені задачі',
+	otherCases: 'Інші кейси'
 };

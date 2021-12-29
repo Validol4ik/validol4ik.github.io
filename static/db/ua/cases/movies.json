@@ -1,0 +1,38 @@
+{
+	"id": 1,
+	"slug": "movies",
+	"name": "TOP 250 Movies",
+	"description": "Nullam non gravida nisl, at gravida quam. Integer malesuada neque lorem, ac     ultrices sem iaculis a. Etiam vehicula suscipit vehicula. Suspendisse lacinia justo non sodales eleifend. Suspendisse ante turpis, posuere eget pharetra at, efficitur et nibh.",
+	"siteUrl": "https://validol4ik.github.io/250movies",
+	"time": "7 days",
+	"price": "150$",
+	"preview": "movies/movies.webp",
+	"image": "movies/movies-single.webp",
+	"type": "Web app",
+	"contributors": [
+		{
+			"id": 0,
+			"avatar": "valik.webp",
+			"url": "https://github.com/validol4ik"
+		}
+	],
+	"purpose": "Pellentesque finibus quam leo, sit amet iaculis enim venenatis placerat.",
+	"solution": "Maecenas dolor orci, tincidunt quis dui in, ultricies tincidunt ex.",
+	"worksFields": [
+		{
+			"id": 0,
+			"title": "Aenean iaculis",
+			"desc": "Nam ultrices euismod leo, ac lacinia felis convallis id. In hac habitasse platea dictumst. Integer auctor, sapien et ornare gravida."
+		},
+		{
+			"id": 1,
+			"title": "Quisque suscipit",
+			"desc": "Quisque suscipit, eros vitae fermentum porta, augue turpis rhoncus orci, non rutrum nunc tellus et lorem. Suspendisse blandit malesuada erat nec tincidunt."
+		},
+		{
+			"id": 2,
+			"title": "Mauris vulputate",
+			"desc": "Mauris vulputate tellus et turpis pretium, ut rutrum ipsum varius. Ut rutrum dui ex, eu malesuada felis fermentum quis. Nam lobortis libero in orci rhoncus, vitae rutrum."
+		}
+	]
+}

@@ -3,15 +3,15 @@
     <div class="container">
 			<ul class="stats">
           <li class="stat">
-            <p class="stat__title">Type of project</p>
+            <p class="stat__title">{{ $t('type') }}</p>
             <h3 class="stat__value">{{ project.type }}</h3>
           </li>
           <li class="stat">
-            <p class="stat__title">Deadline</p>
+            <p class="stat__title">{{ $t('deadline') }}</p>
             <h3 class="stat__value">{{ project.time }}</h3>
           </li>
           <li class="stat">
-            <p class="stat__title">Budget</p>
+            <p class="stat__title">{{ $t('budget') }}</p>
             <h3 class="stat__value">{{ project.price }}</h3>
           </li>
           <li v-if="project.siteUrl" class="stat">
@@ -21,7 +21,7 @@
               size="large"
               blank
               danger
-              >Visit the site</vs-button
+              >{{ $t('siteUrl') }}</vs-button
             >
           </li>
         </ul>
@@ -32,11 +32,11 @@
           alt="Case image"
         />
         <div class="case-target">
-          <h4 class="pretitle">About the case</h4>
+          <h4 class="pretitle">{{ $t('aboutCase') }}</h4>
           <h2 class="case-single__title">{{ project.name }}</h2>
           <p class="case-single__desc">{{ project.description }}</p>
           <div class="avatars">
-            <h6 class="case-single__members">Contributors</h6>
+            <h6 class="case-single__members">{{ $t('contrib') }}</h6>
             <vs-avatar-group max="6">
               <vs-avatar v-for="member in project.contributors" :key="member.id" size="65">
                 <img :src="require(`@/assets/img/contributors/${member.avatar}`)" alt="Member" />
@@ -46,12 +46,12 @@
           <div class="tasks">
             <div class="task">
               <i class="task__icon bx bxs-notepad"></i>
-              <h6 class="task__title">Problem</h6>
+              <h6 class="task__title">{{ $t('goal') }}</h6>
               <p class="task__text">{{ project.purpose }}</p>
             </div>
             <div class="task">
               <i class="task__icon bx bxs-message-square-check"></i>
-              <h6 class="task__title">Solution</h6>
+              <h6 class="task__title">{{ $t('solution') }}</h6>
               <p class="task__text">{{ project.solution }}</p>
             </div>
           </div>
