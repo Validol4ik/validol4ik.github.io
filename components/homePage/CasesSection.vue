@@ -46,7 +46,7 @@ export default {
     selectedTags(tags) {
       this.filterCases(tags)
     },
-		'$route.query.lang': {
+		'$i18n.locale': {
 			handler() {
 				this.loadCases()
 			},

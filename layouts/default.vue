@@ -1,8 +1,8 @@
 <template>
   <div>
-    <portfolio-header :author="author" />
+    <portfolio-header />
     <Nuxt />
-    <portfolio-footer :author="author" />
+    <portfolio-footer />
   </div>
 </template>
 
@@ -15,30 +15,5 @@ export default {
     PortfolioHeader,
     PortfolioFooter
   },
-	data() {
-		return {
-			author: {},
-		}
-	},
-	watch: {
-		'$route.query.lang': {
-			handler() {
-				this.loadData()
-			},
-			deep: true,
-			immediate: true
-		}
-	},
-	mounted() {
-		this.loadData()
-	},
-	methods: {
-		async loadData() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
-			const response = await fetch(`/db/author${addQuery}.json`)
-
-			this.author = await response.json()
-		}
-	},
 }
 </script>

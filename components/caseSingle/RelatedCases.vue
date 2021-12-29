@@ -55,11 +55,12 @@ export default {
 	},
 	methods: {
 		async loadCases() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
-			const response = await fetch(`/db/cases${addQuery}.json`)
+
+			const response = await fetch(`/db/${this.$i18n.locale}/cases.json`)
 
 			this.cases = await response.json()
-		}
+			this.filteredCases = this.cases
+		},
 	}
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
   <main class="main about">
-    <about-section :author="author" />
-    <my-experience title="Work experience" :list="works" />
-    <my-experience title="Education" :list="education" />
+    <about-section />
+    <my-experience :title="$t('workExpTitle')" :list="works" />
+    <my-experience :title="$t('eduTitle')" :list="education" />
     <skills-section :list="skills" />
-    <related-cases title="Some of my projects" />
+    <related-cases :title="$t('someProjectsTitle')" />
   </main>
 </template>
 
@@ -26,11 +26,10 @@ export default {
       works: [],
       education: [],
 			skills: [],
-			author: {},
     }
   },
 	watch: {
-		'$route.query.lang': {
+		'$i18n.locale': {
 			handler() {
 				this.loadData()
 			},
@@ -40,14 +39,12 @@ export default {
 	},
 	methods: {
 		async loadData() {
-			const addQuery = this.$route.query.lang === 'ru' ? '_ru' : ''
-			const response = await fetch(`/db/author${addQuery}.json`)
+			const response = await fetch(`/db/${this.$i18n.locale}/about.json`)
 
 			const author = await response.json()
 			this.works = author.works
 			this.education = author.education
 			this.skills = author.skills
-			this.author = author
 		}
 	},
 }

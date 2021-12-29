@@ -1,7 +1,7 @@
 <template>
   <section class="skills-section">
     <div class="container">
-      <h1 class="section-title">My skills</h1>
+      <h1 class="section-title">{{ $t('skillsTitle') }}</h1>
       <ul class="skills">
         <li v-for="skill in list" :key="skill.id" class="skill">
           <h6 class="skill__title">{{skill.title}}</h6>

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="content-wrapper">
-        <icons-list :list="author.social" />
+        <icons-list :list="social" />
         <h3 class="footer__title">{{ $t('firstName') }} {{ $t('lastName') }}</h3>
       </div>
     </div>
@@ -17,10 +17,30 @@ export default {
   components: {
     IconsList
   },
-	props: {
-		author: {
-			type: Object,
-			default: () => {}
+	data() {
+		return {
+			social: [
+				{
+					"id": 0,
+					"icon": "bxl-telegram",
+					"url": "https://t.me/valiidol4ik"
+				},
+				{
+					"id": 1,
+					"icon": "bxl-instagram-alt",
+					"url": "https://www.instagram.com/valentynpolishchyk"
+				},
+				{
+					"id": 2,
+					"icon": "bxl-linkedin",
+					"url": "https://www.linkedin.com/in/valentyn-polishchyk-8a2435217/"
+				},
+				{
+					"id": 3,
+					"icon": "bxl-github",
+					"url": "https://github.com/validol4ik"
+				}
+			]
 		}
 	}
 }

@@ -1,16 +1,16 @@
 <template>
   <section class="about-section">
     <div class="container">
-      <h4 class="pretitle">About me</h4>
+      <h4 class="pretitle">{{ $t('aboutPretitle') }}</h4>
       <div class="flex-wrapper">
         <img src="@/assets/img/about.webp" class="portret" alt="me" />
         <div class="bio">
           <h1 class="bio-full-name">
-            <span class="bio__title bio-name">{{author.firstName}}</span>
+            <span class="bio__title bio-name">{{ $t('firstName') }}</span>
             <br />
-            <span class="bio__title bio-last-name">{{author.lastName}}</span>
+            <span class="bio__title bio-last-name">{{ $t('lastName') }}</span>
           </h1>
-          <p class="bio__desc">{{author.about}}</p>
+          <p class="bio__desc">{{ $t('authorDesc') }}</p>
         </div>
       </div>
     </div>
@@ -20,12 +20,6 @@
 <script>
 export default {
   name: 'AboutSection',
-	props: {
-		author: {
-			type: Object,
-			default: () => {},
-		}
-	}
 }
 </script>
 
