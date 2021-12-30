@@ -78,7 +78,7 @@ export default {
   &__preview {
     width: 38%;
     height: 590px;
-    border-radius: 16px;
+    border-radius: 22px;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;

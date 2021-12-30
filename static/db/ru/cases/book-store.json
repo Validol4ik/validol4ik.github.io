@@ -2,7 +2,7 @@
 	"id": 0,
 	"slug": "book-store",
 	"name": "Book Store",
-	"description": "Веб приложение для перекупки различных книг по низким ценам. У сайта есть удобная админка для управления товарами, отслеживания статистики и финансового состаяния. Есть много интерактивных элементов, поиск, фильтрация, корзина. Сами книги выполнены в виде 3D моеделей.",
+	"description": "Веб приложение для перекупки различных книг по низким ценам. У сайта есть удобная админка для управления товарами, отслеживания статистики и финансового состаяния. Есть много интерактивных элементов, поиск, фильтрация, корзина. Сами книги выполнены в виде 3D моделей.",
 	"siteUrl": "https://google.com",
 	"time": "1 месяц",
 	"price": "500$",
@@ -26,18 +26,23 @@
 	"worksFields": [
 		{
 			"id": 0,
-			"title": "Aenean iaculis",
-			"desc": "Aenean iaculis eros justo, quis commodo mi faucibus a. Morbi vitae est nunc. Suspendisse felis erat, venenatis nec luctus eget, tempor vel enim."
+			"title": "Никакой регистрации",
+			"desc": "Пользователям не нужно регестрироваться/авторизоваться чтобы делать покупки или хранить товары в корзине."
 		},
 		{
 			"id": 1,
-			"title": "Nunc aliquet",
-			"desc": "Nunc aliquet dolor at eleifend sollicitudin. Morbi pellentesque leo nec neque tincidunt, congue tristique nisl interdum."
+			"title": "Удобный поиск",
+			"desc": "Пользователи могут искать и фильтровать книги по цене и другим параметрам благодаря удобной и быстрой системе."
 		},
 		{
 			"id": 2,
-			"title": "Sed mauris leo",
-			"desc": "Sed mauris leo, congue dapibus neque id, pellentesque sodales enim. Donec luctus condimentum orci, eu dapibus elit elementum a. Nunc nunc ex."
+			"title": "Приятный UI",
+			"desc": "Дизайн сайта продуман таким образом, чтобы покупатель с первых секунд понимал какие действия он может выполнять."
+		},
+		{
+			"id": 3,
+			"title": "Функциональная админка",
+			"desc": "Для администратора создана админка для управления товарами со статистикой и графиками."
 		}
 	]
 }

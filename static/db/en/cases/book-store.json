@@ -2,7 +2,7 @@
 	"id": 0,
 	"slug": "book-store",
 	"name": "Book Store",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante neque, sagittis et posuere et, volutpat at leo. Nam efficitur eget nibh in hendrerit. Curabitur ut consectetur mi. Suspendisse tempor molestie felis.",
+	"description": "Web application for re-buying various books at low prices. The site has a convenient admin panel for managing goods, tracking statistics and financial status. There are many interactive elements, search, filtering, shopping cart. The books are made as 3D models.",
 	"siteUrl": "https://google.com",
 	"time": "1 month",
 	"price": "500$",
@@ -21,23 +21,28 @@
 			"url": "https://github.com/vstruk01"
 		}
 	],
-	"purpose": "Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit consectetur adipiscing.",
-	"solution": "Posuere et, volutpat at leo. Nam efficitur eget nibh in hendrerit. Curabitur ut consectetur mi.",
+	"purpose": "Convenient interface, speed of work, good UX, UI.",
+	"solution": "Separated frontend and backend, used Nuxt.js framework together with Bootstrap",
 	"worksFields": [
 		{
 			"id": 0,
-			"title": "Aenean iaculis",
-			"desc": "Aenean iaculis eros justo, quis commodo mi faucibus a. Morbi vitae est nunc. Suspendisse felis erat, venenatis nec luctus eget, tempor vel enim."
+			"title": "No registration",
+			"desc": "Users do not need to register / log in to make purchases or store items in the shopping cart."
 		},
 		{
 			"id": 1,
-			"title": "Nunc aliquet",
-			"desc": "Nunc aliquet dolor at eleifend sollicitudin. Morbi pellentesque leo nec neque tincidunt, congue tristique nisl interdum."
+			"title": "Convenient search",
+			"desc": "Users can search and filter books by price and other parameters thanks to a convenient and fast system."
 		},
 		{
 			"id": 2,
-			"title": "Sed mauris leo",
-			"desc": "Sed mauris leo, congue dapibus neque id, pellentesque sodales enim. Donec luctus condimentum orci, eu dapibus elit elementum a. Nunc nunc ex."
+			"title": "Nice UI",
+			"desc": "The design of the site is thought out in such a way that the buyer understands from the first seconds what actions he can perform."
+		},
+		{
+			"id": 3,
+			"title": "Functional admin panel",
+			"desc": "An admin panel has been created for the administrator to manage goods with statistics and graphs."
 		}
 	]
 }
