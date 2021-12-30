@@ -9,7 +9,7 @@ export default {
 	recentTitle: 'My recent projects',
 	categories: 'Categories',
 	siteUrl: 'Visit the site',
-	authorDesc: 'I am a programmer for two years. For a year I worked as a developer in a company, the rest of the time I created interesting projects, received an education. I also blog on Instagram, where I talk about my work and field. I love books, films and creativity',
+	authorDesc: "I have been in IT for two years. I worked at a company for one year, and spent the rest of the time on self-development. I'd rather do something well than quickly. I have a blog on Instagram about my activity and field. I am happy to take on interesting projects.",
 	aboutPretitle: 'About me',
 	workExpTitle: 'Work experience',
 	eduTitle: 'Education',

@@ -4,7 +4,7 @@
       v-for="project in cases"
       :key="project.slug"
       class="case"
-      @click="$router.push({ path: `/case/${project.slug}` })"
+      @click="$router.push(localeLocation({ path: `/case/${project.slug}` }))"
     >
       <template #title>
         <h3 class="case__title">{{ project.name }}</h3>
