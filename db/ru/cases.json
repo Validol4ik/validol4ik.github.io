@@ -1,0 +1,56 @@
+[
+  {
+		"id": 0,
+		"slug": "book-store",
+		"name": "Book Store",
+		"excerpt": "Онлайн-магазин для продажи/покупки различных книг в разных форматах.",
+		"siteUrl": "https://google.com",
+		"time": "2 месяц",
+		"price": "800$",
+		"preview": "book-store/book-store.webp",
+		"tags": [1, 3]
+	},
+	{
+		"id": 1,
+		"slug": "movies",
+		"name": "TOP 250 Movies",
+		"excerpt": "Сайт с топ 250, популярными фильмами по версии imdb.",
+		"siteUrl": "https://validol4ik.github.io/250movies",
+		"time": "12 дней",
+		"price": "480$",
+		"preview": "movies/movies.webp",
+		"tags": [3]
+	},
+	{
+		"id": 2,
+		"slug": "business-scheme",
+		"name": "Business Scheme",
+		"excerpt": "Сайт компании Business Scheme для продажи рекламных услуг",
+		"siteUrl": "http://busisckhem.biz",
+		"time": "2 месяца",
+		"price": "900$",
+		"preview": "business/business.webp",
+		"tags": [3]
+	},
+  {
+		"id": 3,
+		"slug": "lucid-theme",
+		"name": "Lucid Theme",
+		"excerpt": "Верстка продажного лендинга WordPress темы Lucid",
+		"siteUrl": "https://validol4ik.github.io/lucid",
+		"time": "4 дня",
+		"price": "160$",
+		"preview": "lucid/lucid.webp",
+		"tags": [0, 2]
+	},
+	{
+		"id": 4,
+		"slug": "spend",
+		"name": "Spend",
+		"excerpt": "Мобильное приложение для слежения за доходами/расходами.",
+		"time": "3 недели",
+		"price": "600$",
+		"preview": "spend/spend.webp",
+		"tags": [0, 2]
+	}
+]

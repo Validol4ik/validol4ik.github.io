@@ -1,0 +1,70 @@
+{
+	"works": [
+		{
+			"id": 0,
+			"title": "InternetDevels",
+			"time": "2020 - now",
+			"desc": "Developed frontend and backend for web applications. Sometimes I developed sites on WordPres",
+			"active": "true"
+		}
+	],
+	"education": [
+		{
+			"id": 0,
+			"title": "TVC of LNTU",
+			"time": "2018 - 2021",
+			"desc": "Computer injenering"
+		},
+		{
+			"id": 1,
+			"title": "Oxit School",
+			"time": "2020 (5 month)",
+			"desc": "Wordpress developing"
+		},
+		{
+			"id": 2,
+			"title": "Lutsk NTU",
+			"time": "2021 - now",
+			"desc": "Ciber security",
+			"active": true
+		}
+	],
+	"skills": [
+		{
+			"id": 0,
+			"title": "JavaScript",
+			"value": 70,
+			"desc": "I have a lot of knowledge and experience in working with js. He even wrote games"
+		},
+		{
+			"id": 1,
+			"title": "Vue",
+			"value": 80,
+			"desc": "I'm literally delighted with this framework, all the last time I set aside for him"
+		},
+		{
+			"id": 2,
+			"title": "Nuxt",
+			"value": 80,
+			"desc": "Most often used for the development of Nuxt"
+		},
+		{
+			"id": 3,
+			"title": "Quasar framework",
+			"value": 70,
+			"desc": "It is my favorite framework, I like to make mobile applications with it"
+		},
+		{
+			"id": 4,
+			"title": "Strapi",
+			"value": 60,
+			"desc": "I made a backend for several sites, wrote my own plugin for the bot's telegrams"
+		},
+		{
+			"id": 5,
+			"title": "Web design",
+			"value": 60,
+			"desc": "I like to create, I know how to use Figma well"
+		}
+	]
+}

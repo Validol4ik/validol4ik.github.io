@@ -1,0 +1,56 @@
+[
+  {
+		"id": 0,
+		"slug": "book-store",
+		"name": "Book Store",
+		"excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"siteUrl": "https://google.com",
+		"time": "1 month",
+		"price": "500$",
+		"preview": "book-store/book-store.webp",
+		"tags": [1, 3]
+	},
+	{
+		"id": 1,
+		"slug": "movies",
+		"name": "TOP 250 Movies",
+		"excerpt": "Cras ultrices orci sed faucibus condimentum. Nulla a facilisis erat, quis ornare nulla. Nam lacus elit, rutrum.",
+		"siteUrl": "https://validol4ik.github.io/250movies",
+		"time": "7 days",
+		"price": "150$",
+		"preview": "movies/movies.webp",
+		"tags": [3]
+	},
+	{
+		"id": 2,
+		"slug": "business-scheme",
+		"name": "Business Scheme",
+		"excerpt": "Nullam eu ornare ipsum. Nullam tempus eleifend lacus.",
+		"siteUrl": "http://busisckhem.biz",
+		"time": "2 month",
+		"price": "350$",
+		"preview": "business/business.webp",
+		"tags": [3]
+	},
+  {
+		"id": 3,
+		"slug": "lucid-theme",
+		"name": "Lucid Theme",
+		"excerpt": "Phasellus non tincidunt nisi. Aliquam eu pharetra mi, eget viverra nibh.",
+		"siteUrl": "https://validol4ik.github.io/lucid",
+		"time": "4 days",
+		"price": "80$",
+		"preview": "lucid/lucid.webp",
+		"tags": [0, 2]
+	},
+	{
+		"id": 4,
+		"slug": "spend",
+		"name": "Spend",
+		"excerpt": "Phasellus non tincidunt nisi. Aliquam eu pharetra mi, eget viverra nibh.",
+		"time": "4 days",
+		"price": "80$",
+		"preview": "spend/spend.webp",
+		"tags": [0, 2]
+	}
+]
